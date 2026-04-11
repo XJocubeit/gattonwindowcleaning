@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ7PQ6W92V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQ7PQ6W92V');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/Brand Assets/9.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Get a Free Quote, Gatton Window Cleaning</title>
+  <meta name="description" content="Get a free window cleaning quote for your home or business in the Lockyer Valley. Takes less than 2 minutes.">
+  <meta property="og:title" content="Get a Free Quote | Gatton Window Cleaning">
+  <meta property="og:description" content="Get a free window cleaning quote for your home or business in the Lockyer Valley. Takes less than 2 minutes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gattonwindowcleaning.com.au/quote.html">
+  <meta property="og:site_name" content="Gatton Window Cleaning">
+  <meta property="og:image" content="https://gattonwindowcleaning.com.au/Brand%20Assets/19.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://gattonwindowcleaning.com.au/Brand%20Assets/19.png">
+  <link rel="canonical" href="https://gattonwindowcleaning.com.au/quote.html">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f4f9ff; color: #0a0f1a; }
+    .font-display { font-family: 'Anton', sans-serif; }
+
+    /* Step visibility */
+    .step-panel { display: none; }
+    .step-panel.active { display: block; }
+
+    /* Option cards */
+    .opt-card { cursor: pointer; transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1); }
+    .opt-card:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(56,182,255,0.12); }
+    .opt-card.selected { border-color: #38b6ff; background: #f0f9ff; box-shadow: 0 0 0 3px rgba(56,182,255,0.2); }
+    .opt-card.selected .opt-check { opacity: 1; transform: scale(1); }
+    .opt-check { opacity: 0; transform: scale(0.5); transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1); }
+
+    /* Progress bar */
+    .progress-fill { transition: width 0.4s cubic-bezier(0.4,0,0.2,1); }
+
+    /* Input styling */
+    .form-input { width: 100%; padding: 14px 18px; border: 2px solid #e5e7eb; border-radius: 12px; font-family: 'Poppins', sans-serif; font-size: 0.875rem; color: #0a0f1a; background: #fff; transition: border-color 0.2s; outline: none; }
+    .form-input:focus { border-color: #38b6ff; }
+    .form-input.error { border-color: #ef4444; }
+    .form-label { display: block; font-weight: 600; font-size: 0.8rem; color: #374151; margin-bottom: 8px; }
+    .error-msg { color: #ef4444; font-size: 0.75rem; margin-top: 4px; display: none; }
+    .error-msg.show { display: block; }
+
+    /* Checkbox style */
+    .check-card { cursor: pointer; }
+    .check-card input { position: absolute; opacity: 0; }
+    .check-card .check-box { width: 20px; height: 20px; border: 2px solid #d1d5db; border-radius: 6px; transition: all 0.2s; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .check-card input:checked ~ .check-box { background: #38b6ff; border-color: #38b6ff; }
+    .check-card input:checked ~ .check-box svg { display: block; }
+    .check-card .check-box svg { display: none; }
+
+    /* Animation */
+    @keyframes slideIn { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:none; } }
+    .step-panel.active { animation: slideIn 0.3s ease forwards; }
+
+    /* Estimate display */
+    .est-value { font-family: 'Anton', sans-serif; font-size: clamp(3rem,8vw,5rem); color: #38b6ff; line-height: 1; }
+
+    #navbar { background: rgba(10,15,26,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(56,182,255,0.08); }
+    .nav-link { color: rgba(255,255,255,0.7); font-weight: 600; font-size: 0.875rem; transition: color 0.2s; text-decoration: none; }
+    .nav-link:hover, .nav-link.active { color: #38b6ff; }
+    .has-dropdown { position: relative; }
+    .has-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; width: 260px; background: #fff; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1); z-index: 100; }
+    .dropdown-item { display: flex; align-items: center; gap: 12px; padding: 11px 18px; font-size: 0.875rem; color: #0a0f1a; font-weight: 500; text-decoration: none; transition: background 0.15s, color 0.15s; }
+    .dropdown-item:hover { background: #f0f9ff; color: #38b6ff; }
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<script src="/components/nav.js"></script>
+
+<!-- PAGE LAYOUT -->
+<div class="min-h-screen pt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
+    <div class="grid lg:grid-cols-5 gap-10 items-start">
+
+      <!-- LEFT: Form -->
+      <div class="lg:col-span-3">
+
+        <!-- Header -->
+        <div class="mb-8">
+          <p class="text-[#38b6ff] font-bold text-xs tracking-widest uppercase mb-2">Free Estimate</p>
+          <h1 class="font-display text-[clamp(2.5rem,6vw,4.5rem)] text-[#0a0f1a] leading-[0.9] mb-3" style="letter-spacing:-0.02em">GET YOUR<br><span class="text-[#38b6ff]">FREE QUOTE</span></h1>
+          <p class="text-gray-400 text-sm leading-[1.75]">Answer a few quick questions and Xavier will call you to confirm your booking and final price. Takes less than 2 minutes.</p>
+        </div>
+
+        <!-- Progress -->
+        <div class="mb-8">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-gray-400">Step <span id="step-current">1</span> of <span id="step-total">6</span></span>
+            <span class="text-xs font-bold text-[#38b6ff]" id="step-pct">17%</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div id="progress-bar" class="progress-fill h-full bg-[#38b6ff] rounded-full" style="width:17%"></div>
+          </div>
+        </div>
+
+        <!-- FORM CARD -->
+        <div class="bg-white rounded-3xl shadow-xl shadow-gray-200/60 border border-gray-100 overflow-hidden">
+
+          <!-- STEP 1: Property Type -->
+          <div class="step-panel active" id="step-1">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">1</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">PROPERTY TYPE</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">Is this for a home or a business?</p>
+            </div>
+            <div class="p-5 sm:p-8 grid sm:grid-cols-2 gap-4">
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="1" data-value="residential">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="w-14 h-14 bg-[#f0f9ff] rounded-2xl flex items-center justify-center mb-4">
+                  <svg class="w-7 h-7 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                </div>
+                <h3 class="font-bold text-[#0a0f1a] text-base mb-1">Residential</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Home, unit, or townhouse</p>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="1" data-value="commercial">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="w-14 h-14 bg-[#f0f9ff] rounded-2xl flex items-center justify-center mb-4">
+                  <svg class="w-7 h-7 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <h3 class="font-bold text-[#0a0f1a] text-base mb-1">Commercial</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Shop, office, or business</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP C2: Commercial, Window Count -->
+          <div class="step-panel" id="step-c2">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">2</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">WINDOW COUNT</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">Approximately how many individual window panes does your business have?</p>
+            </div>
+            <div class="p-5 sm:p-8 space-y-3">
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-5" data-step="c2" data-value="10–25" data-tier="0">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div class="font-display text-3xl text-[#38b6ff] flex-shrink-0">10–25</div>
+                <div>
+                  <h3 class="font-bold text-[#0a0f1a] text-sm mb-0.5">Small</h3>
+                  <p class="text-gray-400 text-xs">Cafe, small office or boutique</p>
+                </div>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-5" data-step="c2" data-value="25–60" data-tier="1">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div class="font-display text-3xl text-[#38b6ff] flex-shrink-0">25–60</div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-bold text-[#0a0f1a] text-sm mb-0.5">Medium <span class="text-[#ffbf00]">,  Most common</span></h3>
+                  </div>
+                  <p class="text-gray-400 text-xs">Restaurant, mid-size shop or showroom</p>
+                </div>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-5" data-step="c2" data-value="60–120" data-tier="2">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div class="font-display text-3xl text-[#38b6ff] flex-shrink-0">60–120</div>
+                <div>
+                  <h3 class="font-bold text-[#0a0f1a] text-sm mb-0.5">Large</h3>
+                  <p class="text-gray-400 text-xs">Large retail, supermarket or gym</p>
+                </div>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-5" data-step="c2" data-value="120+" data-tier="3">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div class="font-display text-3xl text-[#38b6ff] flex-shrink-0">120+</div>
+                <div>
+                  <h3 class="font-bold text-[#0a0f1a] text-sm mb-0.5">Very Large</h3>
+                  <p class="text-gray-400 text-xs">Multi-storey, complex or large building</p>
+                </div>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-5" data-step="c2" data-value="custom" data-tier="-1">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div class="w-12 h-12 bg-[#f0f9ff] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#0a0f1a] text-sm mb-0.5">I know my exact count</h3>
+                  <p class="text-[#38b6ff] text-xs font-semibold">Recommended, most accurate quote</p>
+                </div>
+              </div>
+              <!-- Custom input (shown when "I know my exact count" is selected) -->
+              <div id="c2-custom-row" style="display:none" class="pt-1">
+                <label class="form-label" for="c2-custom-input">Enter your exact pane count *</label>
+                <input type="number" id="c2-custom-input" class="form-input" placeholder="e.g. 34" min="1" style="appearance:none;-moz-appearance:textfield;">
+                <span class="error-msg" id="err-c2-custom">Please enter a valid pane count.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: Number of panes -->
+          <div class="step-panel" id="step-2">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">2</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">NUMBER OF PANES</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">How many window panes approximately? (count each individual pane of glass)</p>
+            </div>
+            <div class="p-5 sm:p-8 grid sm:grid-cols-2 gap-4">
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="2" data-value="1–15" data-tier="0" data-price-min="149" data-price-max="149">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="font-display text-4xl text-[#38b6ff] mb-2">1–15</div>
+                <h3 class="font-bold text-[#0a0f1a] text-sm mb-1">Small</h3>
+                <p class="text-gray-400 text-xs">Studio, 1–2 bed home</p>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="2" data-value="16–25" data-tier="1" data-price-min="199" data-price-max="199">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="font-display text-4xl text-[#38b6ff] mb-2">16–25</div>
+                <h3 class="font-bold text-[#0a0f1a] text-sm mb-1">Medium <span class="text-[#ffbf00]">,  Most common</span></h3>
+                <p class="text-gray-400 text-xs">3 bed home</p>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="2" data-value="26–35" data-tier="2" data-price-min="259" data-price-max="259">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="font-display text-4xl text-[#38b6ff] mb-2">26–35</div>
+                <h3 class="font-bold text-[#0a0f1a] text-sm mb-1">Large</h3>
+                <p class="text-gray-400 text-xs">4+ bed home</p>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="2" data-value="36–50" data-tier="3" data-price-min="349" data-price-max="349">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="font-display text-4xl text-[#38b6ff] mb-2">36–50</div>
+                <h3 class="font-bold text-[#0a0f1a] text-sm mb-1">Extra Large</h3>
+                <p class="text-gray-400 text-xs">Large home</p>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative sm:col-span-2" data-step="2" data-value="50+" data-tier="4" data-price-min="419" data-price-max="419">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="font-display text-4xl text-[#38b6ff] mb-2">50+</div>
+                <h3 class="font-bold text-[#0a0f1a] text-sm mb-1">Very Large / Commercial</h3>
+                <p class="text-gray-400 text-xs">Large property, quote may vary</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Storeys -->
+          <div class="step-panel" id="step-3">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">3</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">STOREYS</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">How many levels does the property have?</p>
+            </div>
+            <div class="p-5 sm:p-8 grid sm:grid-cols-3 gap-4">
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="3" data-value="single" data-price-add="0">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="font-display text-3xl text-[#38b6ff] mb-2">1</div>
+                <h3 class="font-bold text-[#0a0f1a] text-sm">Single Storey</h3>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" id="storey-double-card" data-step="3" data-value="double" data-price-add="30">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="font-display text-3xl text-[#38b6ff] mb-2">2</div>
+                <h3 class="font-bold text-[#0a0f1a] text-sm">Double Storey</h3>
+                <p class="text-[#38b6ff] text-xs font-bold mt-1" id="storey-double-price" style="display:none">+$30</p>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" id="storey-3plus-card" data-step="3" data-value="3+" data-price-add="60">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center">
+                  <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <div class="font-display text-3xl text-[#38b6ff] mb-2">3+</div>
+                <h3 class="font-bold text-[#0a0f1a] text-sm">3+ Storeys</h3>
+                <p class="text-[#38b6ff] text-xs font-bold mt-1" id="storey-3plus-price" style="display:none">+$60</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: Cleaning scope + add-ons -->
+          <div class="step-panel" id="step-4">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">4</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">WHAT'S NEEDED?</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">Select all that apply</p>
+            </div>
+            <div class="p-5 sm:p-8 space-y-3">
+              <label class="check-card flex items-center gap-4 border-2 border-gray-100 rounded-2xl p-5 hover:border-[#38b6ff]/30 hover:bg-[#f0f9ff] transition-all cursor-pointer relative">
+                <input type="checkbox" class="addon-check" data-price="0" data-label="Outside glass" checked>
+                <div class="check-box"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+                <div class="flex-1">
+                  <div class="font-bold text-[#0a0f1a] text-sm">Outside glass</div>
+                  <div class="text-gray-400 text-xs mt-0.5">Exterior window panes</div>
+                </div>
+                <span class="text-[#38b6ff] text-xs font-bold">Included</span>
+              </label>
+
+              <label class="check-card flex items-center gap-4 border-2 border-gray-100 rounded-2xl p-5 hover:border-[#38b6ff]/30 hover:bg-[#f0f9ff] transition-all cursor-pointer relative">
+                <input type="checkbox" class="addon-check" data-price="80" data-label="Inside glass">
+                <div class="check-box"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+                <div class="flex-1">
+                  <div class="font-bold text-[#0a0f1a] text-sm">Inside glass</div>
+                  <div class="text-gray-400 text-xs mt-0.5">Interior window panes</div>
+                </div>
+              </label>
+
+              <label class="check-card flex items-center gap-4 border-2 border-gray-100 rounded-2xl p-5 hover:border-[#38b6ff]/30 hover:bg-[#f0f9ff] transition-all cursor-pointer relative">
+                <input type="checkbox" class="addon-check" data-price="20" data-label="Tracks, frames & sills">
+                <div class="check-box"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <div class="font-bold text-[#0a0f1a] text-sm">Tracks, frames &amp; sills</div>
+                    <span style="background:rgba(255,191,0,0.15);color:#996600;font-size:10px;font-weight:700;padding:2px 8px;border-radius:9999px;letter-spacing:0.05em;white-space:nowrap;"><svg class="w-3 h-3 fill-current inline-block align-middle mr-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>Highly Recommended</span>
+                  </div>
+                  <div class="text-gray-400 text-xs mt-0.5">Deep clean of tracks, frames and sills</div>
+                </div>
+              </label>
+
+              <label class="check-card flex items-center gap-4 border-2 border-gray-100 rounded-2xl p-5 hover:border-[#38b6ff]/30 hover:bg-[#f0f9ff] transition-all cursor-pointer relative">
+                <input type="checkbox" class="addon-check" data-price="48" data-label="Flyscreen cleaning">
+                <div class="check-box"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <div class="font-bold text-[#0a0f1a] text-sm">Flyscreen cleaning</div>
+                    <span style="background:rgba(255,191,0,0.15);color:#996600;font-size:10px;font-weight:700;padding:2px 8px;border-radius:9999px;letter-spacing:0.05em;white-space:nowrap;"><svg class="w-3 h-3 fill-current inline-block align-middle mr-1" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>Highly Recommended</span>
+                  </div>
+                  <div class="text-gray-400 text-xs mt-0.5">Remove, wash, dry and reinstall screens</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP C3: Commercial, Frequency -->
+          <div class="step-panel" id="step-c3">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">3</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">HOW OFTEN?</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">The more regular, the better the rate</p>
+            </div>
+            <div class="p-5 sm:p-8 space-y-3">
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-4" data-step="c3" data-value="one-off">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div>
+                  <h3 class="font-bold text-[#0a0f1a] text-base">One-off</h3>
+                  <p class="text-gray-400 text-xs mt-0.5">Single clean, no commitment</p>
+                </div>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-4" data-step="c3" data-value="bi-monthly">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="font-bold text-[#0a0f1a] text-base">Every 2 months</h3>
+                    <span class="text-[10px] font-bold bg-[#38b6ff]/10 text-[#38b6ff] px-2 py-0.5 rounded-full">10% OFF</span>
+                  </div>
+                  <p class="text-gray-400 text-xs mt-0.5">6 cleans per year</p>
+                </div>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-4" data-step="c3" data-value="monthly">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="font-bold text-[#0a0f1a] text-base">Monthly</h3>
+                    <span class="text-[10px] font-bold bg-[#38b6ff]/10 text-[#38b6ff] px-2 py-0.5 rounded-full">30% OFF</span>
+                  </div>
+                  <p class="text-gray-400 text-xs mt-0.5">12 cleans per year</p>
+                </div>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-4" data-step="c3" data-value="fortnightly">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="font-bold text-[#0a0f1a] text-base">Fortnightly</h3>
+                    <span class="text-[10px] font-bold bg-[#38b6ff]/10 text-[#38b6ff] px-2 py-0.5 rounded-full">40% OFF</span>
+                  </div>
+                  <p class="text-gray-400 text-xs mt-0.5">26 cleans per year</p>
+                </div>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-5 relative flex items-center gap-4" data-step="c3" data-value="weekly">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="font-bold text-[#0a0f1a] text-base">Weekly</h3>
+                    <span style="background:rgba(255,191,0,0.15);color:#996600;font-size:10px;font-weight:700;padding:2px 8px;border-radius:9999px;letter-spacing:0.05em;white-space:nowrap;">Best Value, 50% OFF</span>
+                  </div>
+                  <p class="text-gray-400 text-xs mt-0.5">52 cleans per year</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP C4: Commercial, Scope -->
+          <div class="step-panel" id="step-c4">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">4</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">SCOPE OF WORK</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">Exterior only, or inside and out?</p>
+            </div>
+            <div class="p-5 sm:p-8 grid sm:grid-cols-2 gap-4">
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="c4" data-value="ext">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div class="w-14 h-14 bg-[#f0f9ff] rounded-2xl flex items-center justify-center mb-4">
+                  <svg class="w-7 h-7 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h3 class="font-bold text-[#0a0f1a] text-base mb-1">Exterior Only</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Outside-facing glass only</p>
+              </div>
+              <div class="opt-card border-2 border-gray-100 rounded-2xl p-6 relative" data-step="c4" data-value="both">
+                <span class="opt-check absolute top-4 right-4 w-6 h-6 rounded-full bg-[#38b6ff] flex items-center justify-center"><svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></span>
+                <div class="w-14 h-14 bg-[#f0f9ff] rounded-2xl flex items-center justify-center mb-4">
+                  <svg class="w-7 h-7 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+                </div>
+                <h3 class="font-bold text-[#0a0f1a] text-base mb-1">Both Sides</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">Inside and outside glass</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP C5: Commercial, Business + Contact (merged) -->
+          <div class="step-panel" id="step-c5">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">5</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">YOUR DETAILS</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">Last step, then Xavier's on it.</p>
+            </div>
+            <div class="p-5 sm:p-8 space-y-5">
+              <div>
+                <label class="form-label" for="business-name">Business Name *</label>
+                <input type="text" id="business-name" class="form-input" placeholder="e.g. Gatton IGA" autocomplete="organization">
+                <span class="error-msg" id="err-business-name">Please enter your business name.</span>
+              </div>
+              <div>
+                <label class="form-label" for="business-address">Business Address *</label>
+                <input type="text" id="business-address" class="form-input" placeholder="e.g. 12 Main St, Gatton" autocomplete="street-address">
+                <span class="error-msg" id="err-business-address">Please enter the property address.</span>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="form-label" for="c-fname">First Name *</label>
+                  <input type="text" id="c-fname" class="form-input" placeholder="Your first name" autocomplete="given-name">
+                  <span class="error-msg" id="err-c-fname">Please enter your first name.</span>
+                </div>
+                <div>
+                  <label class="form-label" for="c-lname">Last Name *</label>
+                  <input type="text" id="c-lname" class="form-input" placeholder="Your last name" autocomplete="family-name">
+                  <span class="error-msg" id="err-c-lname">Please enter your last name.</span>
+                </div>
+              </div>
+              <div>
+                <label class="form-label" for="c-phone">Phone Number *</label>
+                <input type="tel" id="c-phone" class="form-input" placeholder="0400 000 000" autocomplete="tel">
+                <span class="error-msg" id="err-c-phone">Please enter a valid phone number.</span>
+              </div>
+              <div>
+                <label class="form-label" for="c-email">Email Address *</label>
+                <input type="email" id="c-email" class="form-input" placeholder="you@business.com.au" autocomplete="email">
+                <span class="error-msg" id="err-c-email">Please enter a valid email address.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 5: Your Details (merged) -->
+          <div class="step-panel" id="step-5">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">5</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">YOUR DETAILS</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">Last step, then Xavier's on it. Your quote is sent straight to his phone.</p>
+            </div>
+            <div class="p-5 sm:p-8 space-y-5">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="form-label" for="fname">First Name *</label>
+                  <input type="text" id="fname" class="form-input" placeholder="Your first name" autocomplete="given-name">
+                  <span class="error-msg" id="err-fname">Please enter your first name.</span>
+                </div>
+                <div>
+                  <label class="form-label" for="lname">Last Name *</label>
+                  <input type="text" id="lname" class="form-input" placeholder="Your last name" autocomplete="family-name">
+                  <span class="error-msg" id="err-lname">Please enter your last name.</span>
+                </div>
+              </div>
+              <div>
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input type="tel" id="phone" class="form-input" placeholder="0400 000 000" autocomplete="tel">
+                <span class="error-msg" id="err-phone">Please enter a valid phone number.</span>
+              </div>
+              <div>
+                <label class="form-label" for="email">Email Address *</label>
+                <input type="email" id="email" class="form-input" placeholder="you@email.com" autocomplete="email">
+                <span class="error-msg" id="err-email">Please enter a valid email address.</span>
+              </div>
+              <div>
+                <label class="form-label" for="suburb">Suburb / Area *</label>
+                <input type="text" id="suburb" class="form-input" placeholder="e.g. Gatton, Laidley, Plainland" autocomplete="address-level2">
+                <span class="error-msg" id="err-suburb">Please enter your suburb.</span>
+              </div>
+              <div>
+                <label class="form-label" for="preferred-time">Best time to call</label>
+                <select id="preferred-time" class="form-input">
+                  <option value="">Select a time (optional)</option>
+                  <option value="morning">Morning, 8am to 12pm</option>
+                  <option value="afternoon">Afternoon, 12pm to 5pm</option>
+                  <option value="evening">Evening, 5pm to 7pm</option>
+                  <option value="anytime">Anytime</option>
+                </select>
+              </div>
+              <div>
+                <label class="form-label" for="notes">Anything else we should know?</label>
+                <textarea id="notes" class="form-input" rows="3" placeholder="e.g. access notes, specific concerns, or anything else helpful..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 7: Price Reveal -->
+          <div class="step-panel" id="step-7">
+            <div class="p-5 pb-5 sm:p-8 sm:pb-6 border-b border-gray-50">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-8 h-8 rounded-xl bg-[#38b6ff] flex items-center justify-center text-white font-bold text-sm">7</div>
+                <h2 class="font-display text-2xl text-[#0a0f1a]" style="letter-spacing:0.01em">YOUR QUOTE</h2>
+              </div>
+              <p class="text-gray-400 text-sm pl-11">Here's your estimated price based on your selections</p>
+            </div>
+            <div class="p-5 sm:p-8">
+              <!-- Price reveal hero -->
+              <div class="text-center py-8 bg-[#f4f9ff] rounded-2xl border border-[#38b6ff]/15 mb-6">
+                <p id="reveal-price-label" class="text-[#38b6ff] font-bold text-xs tracking-widest uppercase mb-4">Your Estimate</p>
+                <div id="reveal-price" class="font-display text-[clamp(3.5rem,12vw,6rem)] text-[#0a0f1a] leading-none mb-2" style="letter-spacing:-0.02em; opacity:0; transform:scale(0.85)">$0</div>
+                <p class="text-gray-400 text-xs" id="reveal-note">Estimated price (excl. GST)</p>
+              </div>
+
+              <!-- Breakdown -->
+              <div id="reveal-breakdown" class="space-y-1 mb-6"></div>
+
+              <!-- Disclaimer -->
+              <div class="bg-[#f4f9ff] border border-[#38b6ff]/15 rounded-2xl p-5 flex items-start gap-3 mb-6">
+                <svg class="w-5 h-5 text-[#38b6ff] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <p id="reveal-disclaimer-text" class="text-gray-500 text-xs leading-[1.75]">This is an estimate only. Xavier will call you to confirm the final price after reviewing your details. No payment is taken online.</p>
+              </div>
+
+              <button id="submit-btn" class="w-full bg-[#38b6ff] hover:bg-[#1fa8f5] active:scale-95 text-white font-bold py-4 rounded-xl text-sm transition-all shadow-xl shadow-[#38b6ff]/20 flex items-center justify-center gap-2">
+                <span id="submit-btn-label">Send My Quote Request</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step nav buttons -->
+          <div class="px-5 sm:px-8 py-5 sm:py-6 border-t border-gray-50 flex items-center justify-between" id="nav-buttons">
+            <button id="btn-back" class="flex items-center gap-2 text-gray-400 hover:text-[#0a0f1a] font-bold text-sm transition-colors py-2 px-4 rounded-xl hover:bg-gray-50 active:scale-95" style="display:none">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 16l-4-4m0 0l4-4m-4 4h18"/></svg>
+              Back
+            </button>
+            <div class="flex-1"></div>
+            <button id="btn-next" class="bg-[#0a0f1a] hover:bg-[#1a2540] active:scale-95 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-all flex items-center gap-2">
+              Next
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Sidebar -->
+      <div class="lg:col-span-2 space-y-5 lg:sticky lg:top-28">
+
+        <!-- Estimate card (revealed on step 7 only) -->
+        <div id="est-revealed" class="bg-[#0a0f1a] rounded-3xl p-8 border border-white/8 relative overflow-hidden" style="display:none">
+          <div class="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#38b6ff]/8 blur-2xl pointer-events-none"></div>
+          <p class="text-[#38b6ff] font-bold text-xs tracking-widest uppercase mb-2 relative">Your Estimate</p>
+          <div class="est-value relative mb-1" id="est-display">$, </div>
+          <p class="text-white/40 text-xs relative" id="est-note">Estimated price (excl. GST)</p>
+          <div class="mt-6 pt-5 border-t border-white/10 space-y-2" id="est-breakdown"></div>
+          <p class="text-white/25 text-xs mt-4">Final price confirmed by Xavier after reviewing your details. No obligation.</p>
+        </div>
+
+        <!-- Testimonial card (shown steps 1–6) -->
+        <div id="est-locked" class="bg-[#0a0f1a] rounded-3xl p-8 border border-white/8 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#38b6ff]/8 blur-2xl pointer-events-none"></div>
+          <div class="flex gap-0.5 mb-4 relative">
+            <svg class="w-4 h-4 text-[#ffbf00]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-[#ffbf00]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-[#ffbf00]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-[#ffbf00]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 text-[#ffbf00]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-white/80 text-sm leading-[1.75] relative mb-5">"Xavier did an amazing job on our place. Windows came up spotless and the price was exactly what he quoted. Couldn't be happier."</p>
+          <div class="flex items-center gap-3 relative">
+            <div class="w-9 h-9 rounded-full bg-[#38b6ff]/20 flex items-center justify-center text-[#38b6ff] font-bold text-sm">S</div>
+            <div>
+              <p class="text-white/70 text-xs font-bold">Sarah M.</p>
+              <p class="text-white/30 text-xs">Gatton, QLD</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What happens next -->
+        <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+          <h3 class="font-display text-lg text-[#0a0f1a] mb-5" style="letter-spacing:0.01em">WHAT HAPPENS NEXT</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <div class="w-7 h-7 rounded-lg bg-[#38b6ff] flex items-center justify-center text-white font-bold text-xs flex-shrink-0">1</div>
+              <div>
+                <div class="font-bold text-[#0a0f1a] text-xs mb-0.5">Xavier gets your quote</div>
+                <div class="text-gray-400 text-xs">Sent straight to his phone, no middleman.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-7 h-7 rounded-lg bg-[#38b6ff] flex items-center justify-center text-white font-bold text-xs flex-shrink-0">2</div>
+              <div>
+                <div class="font-bold text-[#0a0f1a] text-xs mb-0.5">Xavier calls you personally</div>
+                <div class="text-gray-400 text-xs">To confirm the price and lock in a time that suits you.</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-7 h-7 rounded-lg bg-[#38b6ff] flex items-center justify-center text-white font-bold text-xs flex-shrink-0">3</div>
+              <div>
+                <div class="font-bold text-[#0a0f1a] text-xs mb-0.5">Xavier shows up &amp; delivers</div>
+                <div class="text-gray-400 text-xs">On time, streak-free, and done properly.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact block -->
+        <div class="bg-[#f4f9ff] rounded-3xl p-6 border border-[#38b6ff]/10">
+          <p class="text-[#0a0f1a] font-bold text-sm mb-1">Rather just call Xavier?</p>
+          <p class="text-gray-400 text-xs mb-4">He answers Mon–Sat, 7am–5pm. No hold music.</p>
+          <a href="tel:0493742542" class="flex items-center gap-3 bg-white rounded-xl p-4 border border-[#38b6ff]/20 hover:border-[#38b6ff] hover:shadow-md transition-all group">
+            <div class="w-10 h-10 rounded-xl bg-[#38b6ff] flex items-center justify-center flex-shrink-0 shadow-lg shadow-[#38b6ff]/25">
+              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            </div>
+            <div>
+              <div class="font-bold text-[#0a0f1a] text-sm group-hover:text-[#38b6ff] transition-colors">0493 742 542</div>
+              <div class="text-gray-400 text-xs">Tap to call Xavier now</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MESSAGE (hidden) -->
+<div id="success-overlay" class="fixed inset-0 bg-[#0a0f1a]/80 backdrop-blur-sm z-50 flex items-center justify-center p-6" style="display:none !important">
+  <div class="bg-white rounded-3xl p-10 max-w-md w-full text-center shadow-2xl">
+    <div class="w-16 h-16 bg-[#38b6ff]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+      <svg class="w-8 h-8 text-[#38b6ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    </div>
+    <h2 class="font-display text-3xl text-[#0a0f1a] mb-3" style="letter-spacing:0.01em">QUOTE SENT!</h2>
+    <p class="text-gray-400 text-sm leading-[1.75] mb-8">Xavier's got your request. He'll call you personally to confirm your price and lock in a time. Keep an eye on your phone.</p>
+    <a href="/index.html" class="inline-flex items-center gap-2 bg-[#38b6ff] hover:bg-[#1fa8f5] text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-all">
+      Back to Homepage
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div id="footer-mount"></div>
+<script src="/components/footer.js"></script>
+
+<script>
+(function() {
+  const TOTAL_STEPS = 7;
+  let currentStep = 1;
+
+  // Pricing tables (indexed by pane tier 0–4: 1-15, 16-25, 26-35, 36-50, 50+)
+  const PRICING = {
+    base:      [149, 199, 259, 349, 419],
+    interior:  [80,  100, 130, 160, 195],
+    storey2:   [30,  50,  70,  95,  120],
+    storey3:   [60,  90,  120, 165, 210],
+    tracks:    [20,  30,  40,  55,  70],
+    flyscreen: [48,  72,  112, 154, 240],
+  };
+
+  const COMM_PRICING = {
+    'one-off':     { ext: 10, both: 16 },
+    'bi-monthly':  { ext: 9,  both: 14 },
+    'monthly':     { ext: 7,  both: 12 },
+    'fortnightly': { ext: 6,  both: 10 },
+    'weekly':      { ext: 5,  both: 8  },
+  };
+  const COMM_PANE_MIDPOINTS = [17, 42, 90, 150]; // midpoints for 10-25, 25-60, 60-120, 120+
+
+  // State
+  const state = {
+    propertyType: null,
+    panes: null,
+    paneTier: -1,
+    panesMin: 0,
+    panesMax: 0,
+    storeys: null,
+    storeysAdd: 0,
+    addons: [],
+    addonTotal: 0,
+    frequency: null,
+    scope: null,
+    customPaneCount: 0,
+    businessName: '',
+    businessAddress: '',
+    fname: '', lname: '', phone: '', email: '', suburb: '', preferredTime: '', notes: ''
+  };
+
+  function getStepId(n) {
+    if (state.propertyType === 'commercial' && n >= 2 && n <= 6) return 'step-c' + n;
+    return 'step-' + n;
+  }
+
+  function showStep(n) {
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById(getStepId(n)).classList.add('active');
+    const displayTotal = 6;
+    document.getElementById('step-total').textContent = 5;
+    const displayN = Math.min(n, 5);
+    const pct = Math.round((displayN / displayTotal) * 100);
+    document.getElementById('step-current').textContent = displayN;
+    document.getElementById('step-pct').textContent = pct + '%';
+    document.getElementById('progress-bar').style.width = pct + '%';
+
+    // Back button
+    const back = document.getElementById('btn-back');
+    back.style.display = n > 1 ? 'flex' : 'none';
+
+    // Next button
+    const next = document.getElementById('btn-next');
+    const navButtons = document.getElementById('nav-buttons');
+
+    if (n === 7) {
+      next.style.display = 'none';
+      document.getElementById('est-locked').style.display = 'none';
+      document.getElementById('est-revealed').style.display = 'block';
+      triggerPriceReveal();
+    } else {
+      next.style.display = 'flex';
+      document.getElementById('est-locked').style.display = 'block';
+      document.getElementById('est-revealed').style.display = 'none';
+    }
+
+    // Hide nav on step 7
+    navButtons.style.display = n === 7 ? 'none' : 'flex';
+
+    updateEstimate();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Option cards (single-select per step)
+  document.querySelectorAll('.opt-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const step = card.dataset.step;
+      document.querySelectorAll(`.opt-card[data-step="${step}"]`).forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+
+      if (step === '1') state.propertyType = card.dataset.value;
+      if (step === '2') {
+        state.panes = card.dataset.value;
+        state.paneTier = parseInt(card.dataset.tier);
+        state.panesMin = PRICING.base[state.paneTier];
+        state.panesMax = PRICING.base[state.paneTier];
+        updateAddonPrices(state.paneTier);
+      }
+      if (step === 'c2') {
+        state.panes = card.dataset.value;
+        state.paneTier = parseInt(card.dataset.tier);
+        state.customPaneCount = 0;
+        const customRow = document.getElementById('c2-custom-row');
+        if (card.dataset.value === 'custom') {
+          customRow.style.display = 'block';
+          document.getElementById('c2-custom-input').focus();
+        } else {
+          customRow.style.display = 'none';
+        }
+      }
+      if (step === '3') {
+        state.storeys = card.dataset.value;
+        state.storeysAdd = parseInt(card.dataset.priceAdd) || 0;
+      }
+      if (step === 'c3') state.frequency = card.dataset.value;
+      if (step === 'c4') state.scope = card.dataset.value;
+
+      updateEstimate();
+
+      // Auto-advance for steps 1, 2, 3, c3, c4, and c2 (not custom)
+      if (['1','2','3','c3','c4'].includes(step) || (step === 'c2' && card.dataset.value !== 'custom')) {
+        setTimeout(() => {
+          currentStep++;
+          showStep(currentStep);
+        }, 350);
+      }
+    });
+  });
+
+  // Add-ons checkboxes
+  document.querySelectorAll('.addon-check').forEach(cb => {
+    cb.addEventListener('change', () => {
+      recalcAddons();
+      updateEstimate();
+    });
+  });
+
+  function updateAddonPrices(tier) {
+    // Update storey cards
+    const d2 = document.getElementById('storey-double-card');
+    const d3 = document.getElementById('storey-3plus-card');
+    d2.dataset.priceAdd = PRICING.storey2[tier];
+    d3.dataset.priceAdd = PRICING.storey3[tier];
+    document.getElementById('storey-double-price').textContent = '+$' + PRICING.storey2[tier];
+    document.getElementById('storey-3plus-price').textContent = '+$' + PRICING.storey3[tier];
+    // Update storeysAdd if storey already selected
+    if (state.storeys === 'double') state.storeysAdd = PRICING.storey2[tier];
+    if (state.storeys === '3+') state.storeysAdd = PRICING.storey3[tier];
+
+    // Update addon checkboxes
+    const intCheck = document.querySelector('.addon-check[data-label="Inside glass"]');
+    intCheck.dataset.price = PRICING.interior[tier];
+    document.getElementById('interior-price-lbl').textContent = '+$' + PRICING.interior[tier];
+
+    const tracksCheck = document.querySelector('.addon-check[data-label="Tracks, frames & sills"]');
+    tracksCheck.dataset.price = PRICING.tracks[tier];
+    document.getElementById('tracks-price-lbl').textContent = '+$' + PRICING.tracks[tier];
+
+    const flyCheck = document.querySelector('.addon-check[data-label="Flyscreen cleaning"]');
+    flyCheck.dataset.price = PRICING.flyscreen[tier];
+    document.getElementById('fly-price-lbl').textContent = '~$' + PRICING.flyscreen[tier];
+
+    recalcAddons();
+  }
+
+  function recalcAddons() {
+    state.addonTotal = 0;
+    state.addons = [];
+    document.querySelectorAll('.addon-check').forEach(cb => {
+      if (cb.checked) {
+        state.addonTotal += parseInt(cb.dataset.price) || 0;
+        state.addons.push(cb.dataset.label);
+      }
+    });
+  }
+
+  function updateEstimate() {
+    // Price is hidden until step 6, state is kept current by recalcAddons() etc.
+  }
+
+  // Next button
+  document.getElementById('btn-next').addEventListener('click', () => {
+    // Validate current step
+    if (currentStep === 1 && !state.propertyType) return flashNotice('Please select a property type');
+    if (currentStep === 2) {
+      if (!state.panes) return flashNotice('Please select your window count');
+      if (state.panes === 'custom') {
+        const val = parseInt(document.getElementById('c2-custom-input').value);
+        const errEl = document.getElementById('err-c2-custom');
+        const inpEl = document.getElementById('c2-custom-input');
+        if (!val || val < 1) {
+          inpEl.classList.add('error'); errEl.classList.add('show');
+          return;
+        }
+        inpEl.classList.remove('error'); errEl.classList.remove('show');
+        state.customPaneCount = val;
+      }
+    }
+    if (currentStep === 3) {
+      if (state.propertyType === 'commercial') {
+        if (!state.frequency) return flashNotice('Please select a frequency');
+      } else {
+        if (!state.storeys) return flashNotice('Please select the number of storeys');
+      }
+    }
+    if (currentStep === 4) {
+      if (state.propertyType === 'commercial') {
+        if (!state.scope) return flashNotice('Please select exterior only or both sides');
+      } else {
+        recalcAddons();
+      }
+    }
+    if (currentStep === 5) {
+      if (state.propertyType === 'commercial') {
+        const b = validateBusinessDetails();
+        const c = validateCommercialContact();
+        if (!b || !c) return;
+      } else {
+        const p1 = validateContactPart1();
+        const p2 = validateContactPart2();
+        if (!p1 || !p2) return;
+      }
+    }
+
+    if (currentStep < TOTAL_STEPS) {
+      if (currentStep === 5) {
+        currentStep = 7;
+      } else {
+        currentStep++;
+      }
+      showStep(currentStep);
+    }
+  });
+
+  // Back button, clear the selection for the step we're returning to
+  document.getElementById('btn-back').addEventListener('click', () => {
+    if (currentStep > 1) {
+      const stepToClear = currentStep - 1;
+
+      if (stepToClear === 1) {
+        state.propertyType = null;
+        document.querySelectorAll('.opt-card[data-step="1"]').forEach(c => c.classList.remove('selected'));
+      }
+      if (stepToClear === 2) {
+        state.panes = null;
+        state.paneTier = -1;
+        state.panesMin = 0;
+        state.panesMax = 0;
+        state.customPaneCount = 0;
+        if (state.propertyType === 'commercial') {
+          document.querySelectorAll('.opt-card[data-step="c2"]').forEach(c => c.classList.remove('selected'));
+          document.getElementById('c2-custom-row').style.display = 'none';
+          document.getElementById('c2-custom-input').value = '';
+        } else {
+          document.querySelectorAll('.opt-card[data-step="2"]').forEach(c => c.classList.remove('selected'));
+        }
+      }
+      if (stepToClear === 3) {
+        if (state.propertyType === 'commercial') {
+          state.frequency = null;
+          document.querySelectorAll('.opt-card[data-step="c3"]').forEach(c => c.classList.remove('selected'));
+        } else {
+          state.storeys = null;
+          state.storeysAdd = 0;
+          document.querySelectorAll('.opt-card[data-step="3"]').forEach(c => c.classList.remove('selected'));
+        }
+      }
+      if (stepToClear === 4) {
+        if (state.propertyType === 'commercial') {
+          state.scope = null;
+          document.querySelectorAll('.opt-card[data-step="c4"]').forEach(c => c.classList.remove('selected'));
+        } else {
+          document.querySelectorAll('.addon-check').forEach(cb => {
+            cb.checked = cb.dataset.label === 'Outside glass';
+          });
+          recalcAddons();
+        }
+      }
+
+      currentStep--;
+      if (currentStep === 6) currentStep = 5;
+      showStep(currentStep);
+    }
+  });
+
+  function validateContactPart1() {
+    let ok = true;
+    const check = (id, errId, test) => {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errId);
+      if (!test(el.value.trim())) {
+        el.classList.add('error'); err.classList.add('show'); ok = false;
+      } else {
+        el.classList.remove('error'); err.classList.remove('show');
+      }
+    };
+    check('fname','err-fname', v => v.length > 0);
+    check('lname','err-lname', v => v.length > 0);
+    check('phone','err-phone', v => /^[\d\s\+\-\(\)]{8,}$/.test(v));
+    if (ok) {
+      state.fname = document.getElementById('fname').value.trim();
+      state.lname = document.getElementById('lname').value.trim();
+      state.phone = document.getElementById('phone').value.trim();
+    }
+    return ok;
+  }
+
+  function validateContactPart2() {
+    let ok = true;
+    const check = (id, errId, test) => {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errId);
+      if (!test(el.value.trim())) {
+        el.classList.add('error'); err.classList.add('show'); ok = false;
+      } else {
+        el.classList.remove('error'); err.classList.remove('show');
+      }
+    };
+    check('email','err-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    check('suburb','err-suburb', v => v.length > 0);
+    if (ok) {
+      state.email = document.getElementById('email').value.trim();
+      state.suburb = document.getElementById('suburb').value.trim();
+      state.preferredTime = document.getElementById('preferred-time').value;
+      state.notes = document.getElementById('notes').value.trim();
+    }
+    return ok;
+  }
+
+  function triggerPriceReveal() {
+    const priceEl   = document.getElementById('reveal-price');
+    const noteEl    = document.getElementById('reveal-note');
+    const labelEl   = document.getElementById('reveal-price-label');
+    const breakdownEl = document.getElementById('reveal-breakdown');
+    const disclaimerEl = document.getElementById('reveal-disclaimer-text');
+    const submitLbl = document.getElementById('submit-btn-label');
+
+    let total, noteText, labelText, disclaimerText, submitText, breakdownHtml, sbHtml;
+
+    if (state.propertyType === 'commercial') {
+      const rate = COMM_PRICING[state.frequency];
+      const pricePerPane = rate[state.scope === 'both' ? 'both' : 'ext'];
+      const panes = state.customPaneCount > 0 ? state.customPaneCount : (COMM_PANE_MIDPOINTS[state.paneTier] || 17);
+      total = panes * pricePerPane;
+      labelText = 'Ballpark Estimate';
+      noteText = 'Per visit, excl. GST, based on approx. pane count';
+      disclaimerText = 'This is a ballpark based on your approximate pane count. Xavier will discuss exact pricing and set up a scheduled service plan on the call.';
+      submitText = 'Book My Free Call';
+      const freqLabels = { 'one-off': 'One-off', 'bi-monthly': 'Every 2 months', 'monthly': 'Monthly', 'fortnightly': 'Fortnightly', 'weekly': 'Weekly' };
+      const scopeLabel = state.scope === 'both' ? 'Both sides' : 'Exterior only';
+      breakdownHtml = `
+        <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">${state.customPaneCount > 0 ? 'Exact pane count' : 'Approx. pane count'}</span><span class="text-[#0a0f1a] font-bold text-sm">${state.customPaneCount > 0 ? '' : '~'}${panes} panes</span></div>
+        <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Scope</span><span class="text-[#0a0f1a] font-bold text-sm">${scopeLabel}</span></div>
+        <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Frequency</span><span class="text-[#0a0f1a] font-bold text-sm">${freqLabels[state.frequency]}</span></div>
+        <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Rate per pane</span><span class="text-[#0a0f1a] font-bold text-sm">$${pricePerPane}/pane</span></div>
+        <div class="flex justify-between pt-3 items-center"><span class="font-bold text-[#0a0f1a] text-sm">Ballpark per visit</span><span class="font-display text-2xl text-[#38b6ff]">~$${total}</span></div>
+      `;
+      sbHtml = `
+        <div class="flex justify-between text-white/50 text-xs"><span>${freqLabels[state.frequency]} · ${scopeLabel}</span><span>~$${total}/visit</span></div>
+        <div class="flex justify-between text-white/50 text-xs"><span>~${panes} panes × $${pricePerPane}</span></div>
+      `;
+    } else {
+      total = state.panesMin + state.storeysAdd + state.addonTotal;
+      labelText = 'Your Estimate';
+      noteText = state.panes === '50+' ? 'Estimate, may vary for large properties' : 'Estimated price (excl. GST)';
+      disclaimerText = 'This is an estimate only. Xavier will call you to confirm the final price after reviewing your details. No payment is taken online.';
+      submitText = 'Send My Quote Request';
+      breakdownHtml = `<div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Window cleaning (${state.panes} panes)</span><span class="text-[#0a0f1a] font-bold text-sm">$${state.panesMin}</span></div>`;
+      if (state.storeysAdd) breakdownHtml += `<div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Storey access (${state.storeys})</span><span class="text-[#0a0f1a] font-bold text-sm">+$${state.storeysAdd}</span></div>`;
+      document.querySelectorAll('.addon-check').forEach(cb => {
+        if (cb.checked && parseInt(cb.dataset.price) > 0)
+          breakdownHtml += `<div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">${cb.dataset.label}</span><span class="text-[#0a0f1a] font-bold text-sm">+$${cb.dataset.price}</span></div>`;
+      });
+      breakdownHtml += `<div class="flex justify-between pt-3 items-center"><span class="font-bold text-[#0a0f1a] text-sm">Total Estimate</span><span class="font-display text-2xl text-[#38b6ff]">$${total}</span></div>`;
+      sbHtml = `<div class="flex justify-between text-white/50 text-xs"><span>Window cleaning (${state.panes} panes)</span><span>$${state.panesMin}</span></div>`;
+      if (state.storeysAdd) sbHtml += `<div class="flex justify-between text-white/50 text-xs"><span>Storey access (${state.storeys})</span><span>+$${state.storeysAdd}</span></div>`;
+      document.querySelectorAll('.addon-check').forEach(cb => {
+        if (cb.checked && parseInt(cb.dataset.price) > 0)
+          sbHtml += `<div class="flex justify-between text-white/50 text-xs"><span>${cb.dataset.label}</span><span>+$${cb.dataset.price}</span></div>`;
+      });
+    }
+
+    // Update UI text
+    labelEl.textContent = labelText;
+    noteEl.textContent = noteText;
+    disclaimerEl.textContent = disclaimerText;
+    submitLbl.textContent = submitText;
+    breakdownEl.innerHTML = breakdownHtml;
+
+    // Animate price in with count-up
+    priceEl.style.transition = 'none';
+    priceEl.style.opacity = '0';
+    priceEl.style.transform = 'scale(0.85)';
+    const prefix = state.propertyType === 'commercial' ? '~$' : '$';
+    setTimeout(() => {
+      priceEl.style.transition = 'opacity 0.5s cubic-bezier(0.34,1.56,0.64,1), transform 0.5s cubic-bezier(0.34,1.56,0.64,1)';
+      priceEl.style.opacity = '1';
+      priceEl.style.transform = 'scale(1)';
+      const duration = 900;
+      const startTime = Date.now();
+      (function tick() {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        priceEl.textContent = prefix + Math.round(eased * total);
+        if (progress < 1) requestAnimationFrame(tick);
+      })();
+    }, 150);
+
+    // Update sidebar
+    document.getElementById('est-display').textContent = prefix + total;
+    document.getElementById('est-note').textContent = state.propertyType === 'commercial' ? 'Ballpark per visit (excl. GST)' : noteText;
+    document.getElementById('est-breakdown').innerHTML = sbHtml;
+  }
+
+  function validateBusinessDetails() {
+    let ok = true;
+    const check = (id, errId, test) => {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errId);
+      if (!test(el.value.trim())) {
+        el.classList.add('error'); err.classList.add('show'); ok = false;
+      } else {
+        el.classList.remove('error'); err.classList.remove('show');
+      }
+    };
+    check('business-name','err-business-name', v => v.length > 0);
+    check('business-address','err-business-address', v => v.length > 0);
+    if (ok) {
+      state.businessName = document.getElementById('business-name').value.trim();
+      state.businessAddress = document.getElementById('business-address').value.trim();
+    }
+    return ok;
+  }
+
+  function validateCommercialContact() {
+    let ok = true;
+    const check = (id, errId, test) => {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errId);
+      if (!test(el.value.trim())) {
+        el.classList.add('error'); err.classList.add('show'); ok = false;
+      } else {
+        el.classList.remove('error'); err.classList.remove('show');
+      }
+    };
+    check('c-fname','err-c-fname', v => v.length > 0);
+    check('c-lname','err-c-lname', v => v.length > 0);
+    check('c-phone','err-c-phone', v => /^[\d\s\+\-\(\)]{8,}$/.test(v));
+    check('c-email','err-c-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+    if (ok) {
+      state.fname = document.getElementById('c-fname').value.trim();
+      state.lname = document.getElementById('c-lname').value.trim();
+      state.phone = document.getElementById('c-phone').value.trim();
+      state.email = document.getElementById('c-email').value.trim();
+    }
+    return ok;
+  }
+
+  // Submit
+  document.getElementById('submit-btn').addEventListener('click', () => {
+    const overlay = document.getElementById('success-overlay');
+    overlay.style.display = 'flex';
+    overlay.style.removeProperty('display');
+    // In production, send form data to your backend/CRM here
+    // e.g. fetch('/api/quote', { method:'POST', body: JSON.stringify(state) })
+  });
+
+  function flashNotice(msg) {
+    let notice = document.getElementById('flash-notice');
+    if (!notice) {
+      notice = document.createElement('div');
+      notice.id = 'flash-notice';
+      notice.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0a0f1a;color:#fff;padding:12px 24px;border-radius:12px;font-size:0.8rem;font-weight:600;z-index:200;border:1px solid rgba(56,182,255,0.3);animation:none;';
+      document.body.appendChild(notice);
+    }
+    notice.textContent = msg;
+    notice.style.opacity = '1';
+    clearTimeout(notice._t);
+    notice._t = setTimeout(() => { notice.style.opacity = '0'; }, 2500);
+  }
+
+  // Mobile menu
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const io = document.getElementById('icon-open');
+  const ic = document.getElementById('icon-close');
+  btn.addEventListener('click', () => {
+    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+    menu.style.maxHeight = isOpen ? '0px' : menu.scrollHeight + 'px';
+    io.classList.toggle('hidden', !isOpen);
+    ic.classList.toggle('hidden', isOpen);
+  });
+
+  showStep(1);
+})();
+</script>
+</body>
+</html>

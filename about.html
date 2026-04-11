@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ7PQ6W92V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQ7PQ6W92V');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/Brand Assets/9.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Xavier, Gatton Window Cleaning | Lockyer Valley</title>
+  <meta name="description" content="Meet Xavier, owner and operator of Gatton Window Cleaning. Local, reliable, fully insured window cleaning across the Lockyer Valley, QLD.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gattonwindowcleaning.com.au/about.html">
+  <meta property="og:title" content="About Xavier | Gatton Window Cleaning">
+  <meta property="og:description" content="Meet Xavier, owner and operator of Gatton Window Cleaning. Local, reliable, fully insured window cleaning across the Lockyer Valley, QLD.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gattonwindowcleaning.com.au/about.html">
+  <meta property="og:site_name" content="Gatton Window Cleaning">
+  <meta property="og:image" content="https://gattonwindowcleaning.com.au/Brand%20Assets/19.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://gattonwindowcleaning.com.au/Brand%20Assets/19.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gatton Window Cleaning",
+    "telephone": "0493742542",
+    "email": "hello@gattonwindowcleaning.com.au",
+    "url": "https://gattonwindowcleaning.com.au",
+    "founder": {
+      "@type": "Person",
+      "name": "Xavier",
+      "jobTitle": "Owner & Operator"
+    },
+    "areaServed": "Lockyer Valley",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gatton",
+      "addressRegion": "QLD",
+      "postalCode": "4343",
+      "addressCountry": "AU"
+    },
+    "openingHours": "Mo-Sa 07:00-17:00",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/gattonwindowcleaning",
+      "https://www.instagram.com/gattonwindowcleaning"
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #fff; color: #0a0f1a; margin: 0; }
+    .font-anton { font-family: 'Anton', sans-serif; letter-spacing: -0.02em; }
+
+    /* NAV */
+    #navbar { background: rgba(10,15,26,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(56,182,255,0.08); }
+    .nav-link { color: rgba(255,255,255,0.7); font-weight: 600; font-size: 0.875rem; transition: color 0.2s; text-decoration: none; }
+    .nav-link:hover, .nav-link.active { color: #38b6ff; }
+    .has-dropdown { position: relative; }
+    .has-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; width: 260px; background: #fff; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1); z-index: 100; }
+    .dropdown-item { display: flex; align-items: center; gap: 12px; padding: 11px 18px; font-size: 0.875rem; color: #0a0f1a; font-weight: 500; text-decoration: none; transition: background 0.15s, color 0.15s; }
+    .dropdown-item:hover { background: #f0f9ff; color: #38b6ff; }
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+
+    /* HERO */
+    .hero-overlay { background: linear-gradient(100deg, rgba(10,15,26,0.92) 0%, rgba(10,15,26,0.7) 50%, rgba(10,15,26,0.3) 100%); }
+
+    /* SERVICE CARDS */
+    .svc-card { position: relative; overflow: hidden; display: block; text-decoration: none; }
+    .svc-card img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .svc-card:hover img { transform: scale(1.06); }
+    .svc-card .label { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem 1.25rem 1.25rem; background: linear-gradient(to top, rgba(10,15,26,0.85) 0%, transparent 100%); }
+    .svc-card:hover .label { background: linear-gradient(to top, rgba(10,15,26,0.95) 0%, rgba(10,15,26,0.3) 100%); }
+    .svc-card .arrow { opacity: 0; transform: translateX(-6px); transition: opacity 0.2s, transform 0.2s; }
+    .svc-card:hover .arrow { opacity: 1; transform: translateX(0); }
+
+    /* PLAN CARDS */
+    .plan-card { border-radius: 1.25rem; padding: 2rem 1.75rem; position: relative; transition: transform 0.25s cubic-bezier(.34,1.56,.64,1); }
+    .plan-card:hover { transform: translateY(-4px); }
+    .popular-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: #ffbf00; color: #0a0f1a; font-weight: 700; font-size: 0.7rem; padding: 4px 14px; border-radius: 9999px; white-space: nowrap; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* STEP CARDS */
+    .step-card { background: #fff; border-radius: 1.25rem; overflow: hidden; transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s; }
+    .step-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(56,182,255,0.14); }
+
+    /* TESTIMONIALS */
+    .testi-card { background: #fff; border-radius: 1.25rem; padding: 2rem; border: 1px solid #e8f5ff; }
+
+    /* FAQ */
+    .faq-item summary { cursor: pointer; list-style: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.2s ease; }
+
+    /* BUTTONS */
+    .btn-primary { background: #38b6ff; color: #0a0f1a; font-weight: 700; padding: 0.875rem 2.25rem; border-radius: 9999px; display: inline-block; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(56,182,255,0.35); text-decoration: none; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(56,182,255,0.5); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-outline { border: 2px solid #38b6ff; color: #38b6ff; font-weight: 700; padding: 0.875rem 2.25rem; border-radius: 9999px; display: inline-block; transition: background 0.2s, color 0.2s, transform 0.2s; text-decoration: none; }
+    .btn-outline:hover { background: #38b6ff; color: #0a0f1a; transform: translateY(-2px); }
+    .btn-outline-white { border: 2px solid rgba(255,255,255,0.4); color: #fff; font-weight: 700; padding: 0.875rem 2.25rem; border-radius: 9999px; display: inline-block; transition: border-color 0.2s, background 0.2s, transform 0.2s; text-decoration: none; }
+    .btn-outline-white:hover { border-color: #38b6ff; background: rgba(56,182,255,0.1); transform: translateY(-2px); }
+
+    /* MARQUEE */
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-track { display: flex; gap: 3rem; animation: marquee 30s linear infinite; white-space: nowrap; }
+    .marquee-wrap { overflow: hidden; }
+
+    /* VALUE CARDS */
+    .value-card { background: #fff; border-radius: 1.5rem; padding: 2.25rem 2rem; border: 1px solid #e8f5ff; transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s; }
+    .value-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(56,182,255,0.12); }
+
+    a:focus-visible, button:focus-visible { outline: 2px solid #38b6ff; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<script src="/components/nav.js"></script>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section class="relative min-h-screen flex items-end overflow-hidden" style="background:#0a0f1a;">
+  <img src="/Images/DSC04025.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center" style="opacity:0.35;">
+  <div class="absolute inset-0" style="background:linear-gradient(100deg,rgba(10,15,26,0.97) 0%,rgba(10,15,26,0.82) 50%,rgba(10,15,26,0.5) 100%);"></div>
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 80% 70% at 60% 40%,rgba(56,182,255,0.08) 0%,transparent 70%);"></div>
+
+  <div class="relative w-full max-w-7xl mx-auto px-6 pb-24 pt-48">
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem"><ol style="display:flex;align-items:center;gap:8px;list-style:none;padding:0;margin:0"><li><a href="/index.html" style="color:rgba(244,249,255,0.50);font-size:0.8125rem;font-weight:400;text-decoration:none;transition:color 0.15s ease" onmouseover="this.style.color='#f4f9ff'" onmouseout="this.style.color='rgba(244,249,255,0.50)'">Home</a></li><li aria-hidden="true" style="color:rgba(255,255,255,0.30);font-size:0.75rem">›</li><li><span style="color:rgba(244,249,255,0.90);font-size:0.8125rem;font-weight:500">About</span></li></ol></nav>
+    <p class="text-[#38b6ff] font-semibold text-sm uppercase tracking-widest mb-4">Gatton Window Cleaning</p>
+    <h1 class="font-anton text-white leading-[0.9] mb-5" style="font-size:clamp(3rem,9vw,7rem);letter-spacing:-0.02em">
+      MEET THE GUY<br>
+      BEHIND THE<br>
+      <span style="color:#38b6ff">SQUEEGEE</span>
+    </h1>
+    <div class="flex items-center gap-2 mb-6">
+      <span class="text-[#ffbf00] text-xl"><svg class="w-4 h-4 fill-current inline-block" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg class="w-4 h-4 fill-current inline-block" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg class="w-4 h-4 fill-current inline-block" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg class="w-4 h-4 fill-current inline-block" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg class="w-4 h-4 fill-current inline-block" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></span>
+      <span class="text-white/70 text-sm font-medium">5-star rated · Lockyer Valley</span>
+    </div>
+    <p class="text-white/60 text-base leading-relaxed max-w-xl mb-10">Hi, I'm Xavier, owner and operator of Gatton Window Cleaning. Every window I clean gets my full attention, because my name's on the business.</p>
+    <div class="flex flex-wrap gap-4">
+      <a href="/quote.html" class="btn-primary text-base">Get Your Free Quote →</a>
+      <a href="tel:0493742542" class="btn-outline-white text-base">0493 742 542</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ STORY SECTION ══════════════════════════ -->
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+      <!-- Text -->
+      <div>
+        <p class="text-[#38b6ff] font-semibold tracking-widest text-sm uppercase mb-3">How It Started</p>
+        <h2 class="font-anton leading-[0.9] mb-8 text-[#0a0f1a]" style="font-size:clamp(2.5rem,6vw,4.5rem);letter-spacing:-0.02em">
+          FROM ONE WINDOW<br>
+          TO THE WHOLE<br>
+          <span style="color:#38b6ff">LOCKYER VALLEY</span>
+        </h2>
+        <div class="space-y-5 text-[#374151] text-base leading-[1.7]">
+          <p>I started Gatton Window Cleaning because I saw a gap, most window cleaners in the area were either unreliable, rushed the job, or just wiped the glass without touching the tracks and frames. I wanted to do it differently.</p>
+          <p>Every clean I do follows the same 4-step method: frames first, then tracks and seals, then the glass, then a final inspection. It takes longer than just wiping the panes, but the results last. That's the whole point.</p>
+          <p>I'm based in Gatton and I service the whole Lockyer Valley, from Gatton and Laidley through to Grantham, Forest Hill, Hatton Vale, Adare, Regency Downs, Woodlands, and Plainlands. No subcontractors, no teams, just me, doing the job properly.</p>
+        </div>
+      </div>
+
+      <!-- Image with floating stat cards -->
+      <div class="relative">
+        <div class="rounded-3xl overflow-hidden" style="box-shadow:0 24px 80px rgba(10,15,26,0.18);">
+          <img src="/Images/Xavier.jpg" alt="Xavier, owner of Gatton Window Cleaning" class="w-full h-auto block">
+        </div>
+        <!-- Stat card bottom-left -->
+        <div class="absolute -bottom-5 -left-5 bg-[#ffbf00] text-[#0a0f1a] rounded-2xl px-5 py-4 shadow-xl" style="box-shadow:0 8px 32px rgba(255,191,0,0.35);">
+          <p class="font-anton text-xl leading-none">100%</p>
+          <p class="text-xs font-bold mt-1 uppercase tracking-wide">Streak-Free</p>
+        </div>
+        <!-- Stat card top-right -->
+        <div class="absolute -top-5 -right-5 bg-[#0a0f1a] text-white rounded-2xl px-5 py-4" style="box-shadow:0 8px 32px rgba(10,15,26,0.3);">
+          <p class="font-anton text-xl leading-none text-[#38b6ff]">5<svg class="w-5 h-5 fill-current inline-block align-middle" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></p>
+          <p class="text-xs font-semibold mt-1 text-white/70 uppercase tracking-wide">Rated</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ VALUES SECTION ══════════════════════════ -->
+<section class="py-24 bg-[#f4f9ff]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <p class="text-[#38b6ff] font-semibold tracking-widest text-sm uppercase mb-3">Why Choose GWC</p>
+      <h2 class="font-anton leading-[0.9] text-[#0a0f1a]" style="font-size:clamp(2.5rem,6vw,4.5rem);letter-spacing:-0.02em">
+        WHAT MAKES US<br>
+        DIFFERENT
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="value-card">
+        <div class="mb-5" style="width:48px;height:48px;background:#e8f5ff;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+          <svg style="width:24px;height:24px;color:#38b6ff;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="font-anton text-2xl text-[#0a0f1a] mb-3">PROPER METHOD</h3>
+        <p class="text-[#374151] text-sm leading-[1.7]">Frames before glass. Tracks before squeegee. A clean that actually lasts, not just a surface wipe.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="mb-5" style="width:48px;height:48px;background:#e8f5ff;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+          <svg style="width:24px;height:24px;color:#38b6ff;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><path d="M12 2a7 7 0 017 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <h3 class="font-anton text-2xl text-[#0a0f1a] mb-3">LOCALLY OWNED</h3>
+        <p class="text-[#374151] text-sm leading-[1.7]">I live and work in the Lockyer Valley. No call centres, no franchises. You deal with me directly, every time.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="mb-5" style="width:48px;height:48px;background:#e8f5ff;border-radius:12px;display:flex;align-items:center;justify-content:center;">
+          <svg style="width:24px;height:24px;color:#38b6ff;" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>
+        </div>
+        <h3 class="font-anton text-2xl text-[#0a0f1a] mb-3">STREAK-FREE GUARANTEE</h3>
+        <p class="text-[#374151] text-sm leading-[1.7]">If there's a streak or a smear when I'm done, I fix it on the spot. No questions, no excuses.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ STATS BAR ══════════════════════════ -->
+<section class="py-16 bg-[#0a0f1a]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+      <div class="text-center">
+        <p class="font-anton text-4xl md:text-5xl text-[#38b6ff] mb-2">100%</p>
+        <p class="text-white/50 text-sm font-medium">Streak-Free Guarantee</p>
+      </div>
+
+      <div class="text-center">
+        <p class="font-anton text-4xl md:text-5xl text-[#38b6ff] mb-2">5<svg class="w-5 h-5 fill-current inline-block align-middle" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></p>
+        <p class="text-white/50 text-sm font-medium">Google Rated</p>
+      </div>
+
+      <div class="text-center">
+        <p class="font-anton text-4xl md:text-5xl text-[#38b6ff] mb-2" style="font-size:clamp(1.75rem,4vw,3rem);">Same Week</p>
+        <p class="text-white/50 text-sm font-medium">Availability</p>
+      </div>
+
+      <div class="text-center">
+        <p class="font-anton text-4xl md:text-5xl text-[#38b6ff] mb-2">Fully</p>
+        <p class="text-white/50 text-sm font-medium">Insured</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ CONTACT FORM ══════════════════════════ -->
+<div id="contact-form-mount"></div>
+<script src="/components/contact-form.js"></script>
+
+<!-- ══════════════════════════ CTA BANNER ══════════════════════════ -->
+<section class="relative overflow-hidden py-24 bg-[#0a0f1a]">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 70% 80% at 50% 50%,rgba(56,182,255,0.1) 0%,transparent 70%)"></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center">
+    <p class="text-[#38b6ff] font-semibold tracking-widest text-sm uppercase mb-4">Ready to Book?</p>
+    <h2 class="font-anton text-white leading-[0.9] mb-6" style="font-size:clamp(3rem,8vw,6rem);letter-spacing:-0.02em">
+      READY FOR<br><span class="text-[#38b6ff]">CRYSTAL CLEAR</span><br>WINDOWS?
+    </h2>
+    <p class="text-white/50 text-base leading-relaxed max-w-lg mx-auto mb-10">Get a free quote in under 2 minutes. Xavier will call you back to confirm your booking time.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/quote.html" class="btn-primary text-base">Get Your Free Quote</a>
+      <a href="tel:0493742542" class="btn-outline-white text-base">0493 742 542</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<div id="footer-mount"></div>
+<script src="/components/footer.js"></script>
+
+</body>
+</html>

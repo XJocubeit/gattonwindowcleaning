@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ7PQ6W92V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WQ7PQ6W92V');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/Brand Assets/9.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Our Services, Gatton Window Cleaning</title>
+  <meta name="description" content="Professional window cleaning services across the Lockyer Valley. Exterior, interior, screens, tracks, frames and commercial.">
+  <link rel="canonical" href="https://gattonwindowcleaning.com.au/services.html">
+  <meta property="og:title" content="Our Services | Gatton Window Cleaning">
+  <meta property="og:description" content="Professional window cleaning services across the Lockyer Valley. Exterior, interior, screens, tracks, frames and commercial.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gattonwindowcleaning.com.au/services.html">
+  <meta property="og:site_name" content="Gatton Window Cleaning">
+  <meta property="og:image" content="https://gattonwindowcleaning.com.au/Brand%20Assets/19.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://gattonwindowcleaning.com.au/Brand%20Assets/19.png">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f4f9ff; color: #0a0f1a; }
+    .font-anton { font-family: 'Anton', sans-serif; letter-spacing: -0.02em; }
+    .nav-link { color: rgba(255,255,255,0.7); font-weight: 600; font-size: 0.875rem; transition: color 0.2s; text-decoration: none; }
+    .nav-link:hover, .nav-link.active { color: #38b6ff; }
+    #navbar { background: rgba(10,15,26,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(56,182,255,0.08); }
+    .has-dropdown { position: relative; }
+    .has-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; width: 260px; background: #fff; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1); z-index: 100; }
+    .dropdown-item { display: flex; align-items: center; gap: 12px; padding: 11px 18px; font-size: 0.875rem; color: #0a0f1a; font-weight: 500; text-decoration: none; transition: background 0.15s, color 0.15s; }
+    .dropdown-item:hover { background: #f0f9ff; color: #38b6ff; }
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .btn-primary {
+      background: #38b6ff; color: #0a0f1a; font-weight: 700;
+      padding: 0.75rem 2rem; border-radius: 9999px; display: inline-block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(56,182,255,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(56,182,255,0.45); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-outline {
+      border: 2px solid #38b6ff; color: #38b6ff; font-weight: 700;
+      padding: 0.75rem 2rem; border-radius: 9999px; display: inline-block;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .btn-outline:hover { background: #38b6ff; color: #0a0f1a; transform: translateY(-2px); }
+    .service-card {
+      position: relative; border-radius: 1.25rem; overflow: hidden;
+      box-shadow: 0 4px 24px rgba(10,15,26,0.18);
+      transition: transform 0.3s cubic-bezier(.34,1.56,.64,1), box-shadow 0.3s;
+      display: block;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(56,182,255,0.22); }
+    .service-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+    .service-card:hover img { transform: scale(1.05); }
+    .service-card .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,15,26,0.88) 0%, rgba(10,15,26,0.3) 50%, transparent 100%);
+    }
+    .service-card .label {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem 1.5rem;
+      display: flex; align-items: flex-end; justify-content: space-between;
+    }
+    .arrow-circle {
+      width: 36px; height: 36px; border-radius: 50%; background: rgba(56,182,255,0.2);
+      border: 1.5px solid rgba(56,182,255,0.5); display: flex; align-items: center; justify-content: center;
+      color: #38b6ff; font-size: 1rem; flex-shrink: 0;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .service-card:hover .arrow-circle { background: #38b6ff; color: #0a0f1a; transform: translateX(3px); }
+    .plan-card {
+      border-radius: 1.25rem; padding: 2rem; position: relative;
+      transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s;
+    }
+    .plan-card:hover { transform: translateY(-4px); }
+    .popular-badge {
+      position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+      background: #ffbf00; color: #0a0f1a; font-weight: 700; font-size: 0.75rem;
+      padding: 4px 16px; border-radius: 9999px; white-space: nowrap; letter-spacing: 0.05em;
+    }
+    .tick-item { display: flex; align-items: flex-start; gap: 0.6rem; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<script src="/components/nav.js"></script>
+
+<!-- HERO -->
+<section class="bg-[#0a0f1a] pt-20 pb-16 text-center relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(56,182,255,0.12) 0%,transparent 70%)"></div>
+  <div class="relative max-w-3xl mx-auto px-4">
+    <p class="text-[#38b6ff] font-semibold tracking-widest text-sm uppercase mb-3">Lockyer Valley's #1 Window Cleaners</p>
+    <h1 class="font-anton text-5xl md:text-7xl text-white leading-tight mb-5">OUR SERVICES</h1>
+    <p class="text-white/70 text-lg max-w-xl mx-auto leading-relaxed">From streak-free glass to spotless screens and detailed tracks, we do it all, properly.</p>
+  </div>
+</section>
+
+<!-- SERVICE CARDS -->
+<section class="py-20 px-4 bg-[#f4f9ff]">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Top row: 2 large cards -->
+    <div class="grid gap-4 md:grid-cols-2 mb-4">
+
+      <a href="/exterior-window-cleaning.html" class="service-card" style="height:380px;">
+        <img src="/Images/XavierCleaning.jpg" alt="Exterior Window Cleaning" style="object-position:50% 5%;">
+        <div class="overlay"></div>
+        <div class="label">
+          <div>
+            <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-widest mb-1">Residential &amp; Commercial</p>
+            <h2 class="font-anton text-white text-3xl leading-tight">EXTERIOR WINDOW<br>CLEANING</h2>
+            <p class="text-white/55 text-xs mt-1">Crystal-clear windows, cobwebs &amp; grime removed</p>
+          </div>
+          <div class="arrow-circle ml-4">→</div>
+        </div>
+      </a>
+
+      <a href="/interior-window-cleaning.html" class="service-card" style="height:380px;">
+        <img src="/Images/Sqeegee.jpg" alt="Interior Window Cleaning" style="object-position:50% 50%;">
+        <div class="overlay"></div>
+        <div class="label">
+          <div>
+            <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-widest mb-1">Residential &amp; Commercial</p>
+            <h2 class="font-anton text-white text-3xl leading-tight">INTERIOR WINDOW<br>CLEANING</h2>
+            <p class="text-white/55 text-xs mt-1">Smear-free, streak-free interior glass</p>
+          </div>
+          <div class="arrow-circle ml-4">→</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Bottom row: 3 smaller cards -->
+    <div class="grid gap-4 md:grid-cols-3">
+
+      <a href="/screen-cleaning.html" class="service-card" style="height:260px;">
+        <img src="/Images/ScreenCleaning2.png" alt="Screen Cleaning" style="object-position:50% 50%;">
+        <div class="overlay"></div>
+        <div class="label">
+          <div>
+            <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-widest mb-1">Add-On Service</p>
+            <h2 class="font-anton text-white text-xl leading-tight">SCREEN CLEANING</h2>
+          </div>
+          <div class="arrow-circle ml-3">→</div>
+        </div>
+      </a>
+
+      <a href="/track-sill-frame-detailing.html" class="service-card" style="height:260px;">
+        <img src="/Images/Detail.jpg" alt="Track Sill Frame Detailing" style="object-position:25% 5%;">
+        <div class="overlay"></div>
+        <div class="label">
+          <div>
+            <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-widest mb-1">Add-On Service</p>
+            <h2 class="font-anton text-white text-xl leading-tight">TRACK &amp; FRAME<br>DETAILING</h2>
+          </div>
+          <div class="arrow-circle ml-3">→</div>
+        </div>
+      </a>
+
+      <a href="/commercial-window-cleaning.html" class="service-card" style="height:260px;">
+        <img src="/Images/Commerical.webp" alt="Commercial Window Cleaning" style="object-position:50% 50%;">
+        <div class="overlay"></div>
+        <div class="label">
+          <div>
+            <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-widest mb-1">Commercial</p>
+            <h2 class="font-anton text-white text-xl leading-tight">COMMERCIAL<br>CLEANING</h2>
+          </div>
+          <div class="arrow-circle ml-3">→</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- SAVE BIG SECTION -->
+<section class="py-20 px-4 bg-[#0a0f1a]">
+  <div class="max-w-5xl mx-auto text-center">
+    <p class="text-[#38b6ff] font-semibold tracking-widest text-sm uppercase mb-3">Recurring Booking Discounts</p>
+    <h2 class="font-anton text-4xl md:text-5xl text-white mb-4">SAVE BIG WITH REGULAR CLEANS</h2>
+    <p class="text-white/60 max-w-xl mx-auto mb-14 leading-relaxed">Lock in a recurring schedule and save every single visit. The more often we come, the more you save, and your windows stay spotless year-round.</p>
+    <div class="grid gap-6 md:grid-cols-3">
+
+      <!-- Biannual -->
+      <div class="plan-card bg-[#0d1525] border border-white/10">
+        <p class="text-[#38b6ff] font-semibold text-sm uppercase tracking-widest mb-2">Biannual</p>
+        <div class="font-anton text-5xl text-white mb-1">$50 <span class="text-2xl text-white/50">off</span></div>
+        <p class="text-white/50 text-sm mb-6">per visit · 2 cleans/year</p>
+        <ul class="text-left space-y-3 text-sm text-white/80 mb-8">
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> $50 off every visit</li>
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> Priority scheduling</li>
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> FREE Nest Removal</li>
+        </ul>
+        <a href="/quote.html" class="btn-outline w-full text-center block">Get Your Quote</a>
+      </div>
+
+      <!-- Quarterly, MOST POPULAR -->
+      <div class="plan-card border-2 border-[#ffbf00] bg-white relative" style="box-shadow:0 8px 40px rgba(255,191,0,0.2)">
+        <div class="popular-badge">MOST POPULAR</div>
+        <p class="text-[#0a0f1a] font-semibold text-sm uppercase tracking-widest mb-2">Quarterly</p>
+        <div class="font-anton text-5xl text-[#0a0f1a] mb-1">$100 <span class="text-2xl text-[#0a0f1a]/40">off</span></div>
+        <p class="text-[#0a0f1a]/50 text-sm mb-6">per visit · 4 cleans/year</p>
+        <ul class="text-left space-y-3 text-sm text-[#0a0f1a]/80 mb-8">
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> $100 off every visit</li>
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> Priority scheduling</li>
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> FREE Nest Removal</li>
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> Filter Care Guarantee</li>
+        </ul>
+        <a href="/quote.html" class="btn-primary w-full text-center block">Get Your Quote</a>
+      </div>
+
+      <!-- Annual -->
+      <div class="plan-card bg-[#0d1525] border border-white/10">
+        <p class="text-[#38b6ff] font-semibold text-sm uppercase tracking-widest mb-2">Annual</p>
+        <div class="font-anton text-5xl text-white mb-1">$150 <span class="text-2xl text-white/50">off</span></div>
+        <p class="text-white/50 text-sm mb-6">per visit · 1 clean/year</p>
+        <ul class="text-left space-y-3 text-sm text-white/80 mb-8">
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> $150 off every visit</li>
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> Priority scheduling</li>
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> FREE Nest Removal</li>
+          <li class="tick-item"><img src="/Brand%20Assets/TickBlack.png" class="w-4 h-4 mt-0.5 flex-shrink-0" style="filter:invert(55%) sepia(90%) saturate(500%) hue-rotate(180deg)" alt="✓"> FREE Hard Water Removal</li>
+        </ul>
+        <a href="/quote.html" class="btn-outline w-full text-center block">Get Your Quote</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 px-4 bg-[#f4f9ff] text-center">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="font-anton text-4xl md:text-5xl text-[#0a0f1a] mb-4">READY FOR SPOTLESS WINDOWS?</h2>
+    <p class="text-[#0a0f1a]/70 mb-8 text-lg leading-relaxed">Get a free quote in minutes. Xavier will call you back to confirm your booking.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="/quote.html" class="btn-primary text-base">Get Your Free Quote</a>
+      <a href="tel:0493742542" class="btn-outline text-base">Call 0493 742 542</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div id="footer-mount"></div>
+<script src="/components/footer.js"></script>
+
+</body>
+</html>
