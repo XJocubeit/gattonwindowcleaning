@@ -44,7 +44,10 @@
       "Bash(grep -rn \"padding-top:80px;background:#0a0f1a;border-bottom\" /Users/xavierjocubeit/VScode/*.html)",
       "Bash(grep -rl \"Services</a></li><li aria-hidden\" /Users/xavierjocubeit/VScode/*.html)",
       "Bash(grep -c \"\\\\\\\\›\" /Users/xavierjocubeit/VScode/locations/*.html)",
-      "Bash(ls /Users/xavierjocubeit/VScode/*.xml /Users/xavierjocubeit/VScode/robots.txt)"
+      "Bash(ls /Users/xavierjocubeit/VScode/*.xml /Users/xavierjocubeit/VScode/robots.txt)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }

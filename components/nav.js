@@ -69,6 +69,7 @@
             <a href="/locations/adare.html" class="gwc-dropdown-item">${icon(IC.pin)} Adare</a>
             <a href="/locations/regency-downs.html" class="gwc-dropdown-item">${icon(IC.pin)} Regency Downs</a>
             <a href="/locations/woodlands.html" class="gwc-dropdown-item">${icon(IC.pin)} Woodlands</a>
+            <a href="/locations/helidon.html" class="gwc-dropdown-item">${icon(IC.pin)} Helidon</a>
           </div>
         </div>
 
@@ -116,6 +117,7 @@
       <a href="/locations/adare.html" class="gwc-mobile-sublnk">→ Adare</a>
       <a href="/locations/regency-downs.html" class="gwc-mobile-sublnk">→ Regency Downs</a>
       <a href="/locations/woodlands.html" class="gwc-mobile-sublnk">→ Woodlands</a>
+      <a href="/locations/helidon.html" class="gwc-mobile-sublnk">→ Helidon</a>
       <a href="/quote.html" class="gwc-mobile-link" style="margin-top:0.5rem;">Get Your Quote</a>
       <a href="/about.html" class="gwc-mobile-link">About</a>
       <a href="/blog.html" class="gwc-mobile-link">Blog</a>
