@@ -515,7 +515,7 @@
 
       <a href="/blog-how-often-clean-windows-lockyer-valley.html" class="blog-card group">
         <div class="rounded-2xl overflow-hidden mb-5" style="height:210px;">
-          <img class="w-full h-full object-cover" src="https://placehold.co/600x340/0a0f1a/38b6ff?text=Window+Cleaning+Guide" alt="How often to clean windows Lockyer Valley">
+          <img class="w-full h-full object-cover" src="/Images/XavierCleaning.jpg" alt="How often to clean windows Lockyer Valley">
         </div>
         <span class="inline-block bg-[#e8f5ff] text-[#0a7ac0] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">Tips &amp; Guides</span>
         <h3 class="font-anton text-xl text-[#0a0f1a] mb-2 transition-colors leading-tight">HOW OFTEN SHOULD YOU CLEAN YOUR WINDOWS?</h3>
@@ -524,7 +524,7 @@
 
       <a href="/blog-window-cleaning-cost-gatton-qld.html" class="blog-card group">
         <div class="rounded-2xl overflow-hidden mb-5" style="height:210px;">
-          <img class="w-full h-full object-cover" src="https://placehold.co/600x340/0a0f1a/38b6ff?text=Window+Cleaning+Cost" alt="Window cleaning cost Gatton QLD 2026">
+          <img class="w-full h-full object-cover" src="/Images/Cleaning Glass.jpg" alt="Window cleaning cost Gatton QLD 2026">
         </div>
         <span class="inline-block bg-[#e8f5ff] text-[#0a7ac0] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">Pricing</span>
         <h3 class="font-anton text-xl text-[#0a0f1a] mb-2 transition-colors leading-tight">WINDOW CLEANING COST IN GATTON, QLD, 2026</h3>
@@ -533,7 +533,7 @@
 
       <a href="/blog-dirty-window-tracks-guide.html" class="blog-card group">
         <div class="rounded-2xl overflow-hidden mb-5" style="height:210px;">
-          <img class="w-full h-full object-cover" src="https://placehold.co/600x340/0a0f1a/38b6ff?text=Window+Track+Cleaning" alt="Dirty window tracks guide">
+          <img class="w-full h-full object-cover" src="/Images/Seals and Tracks.jpg" alt="Dirty window tracks guide">
         </div>
         <span class="inline-block bg-[#e8f5ff] text-[#0a7ac0] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">Maintenance</span>
         <h3 class="font-anton text-xl text-[#0a0f1a] mb-2 transition-colors leading-tight">DIRTY WINDOW TRACKS? WHY IT MATTERS MORE THAN YOU THINK</h3>
@@ -568,6 +568,13 @@
 <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
 <div id="footer-mount"></div>
 <script src="/components/footer.js"></script>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
