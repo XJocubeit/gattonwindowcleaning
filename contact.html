@@ -239,5 +239,39 @@
 <div id="footer-mount"></div>
 <script src="/components/footer.js"></script>
 
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    const origText = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = 'Sending…';
+
+    const payload = {
+      source: 'contact-page',
+      fullName:            document.getElementById('full-name').value.trim(),
+      phone:               document.getElementById('phone').value.trim(),
+      email:               document.getElementById('email').value.trim(),
+      suburb:              document.getElementById('suburb').value.trim(),
+      service:             document.getElementById('service').value,
+      message:             document.getElementById('message').value.trim(),
+      preferredContactTime: document.getElementById('contact-time').value,
+    };
+
+    try {
+      await fetch('https://services.leadconnectorhq.com/hooks/KZviLEojY7TgiPp41oQG/webhook-trigger/QcPbAo05897VJCmko5Nz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (_) {}
+
+    btn.disabled = false;
+    btn.innerHTML = origText;
+    this.reset();
+    document.getElementById('success-msg').classList.remove('hidden');
+  });
+</script>
+
 </body>
 </html>

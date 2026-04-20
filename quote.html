@@ -1148,12 +1148,61 @@
   }
 
   // Submit
-  document.getElementById('submit-btn').addEventListener('click', () => {
+  document.getElementById('submit-btn').addEventListener('click', async () => {
+    const btn = document.getElementById('submit-btn');
+    const lbl = document.getElementById('submit-btn-label');
+    btn.disabled = true;
+    lbl.textContent = 'Sending…';
+
+    // Calculate estimated total for the payload
+    let estimatedTotal = 0;
+    if (state.propertyType === 'commercial') {
+      const rate = COMM_PRICING[state.frequency];
+      if (rate) {
+        const pricePerPane = rate[state.scope === 'both' ? 'both' : 'ext'];
+        const panes = state.customPaneCount > 0 ? state.customPaneCount : (COMM_PANE_MIDPOINTS[state.paneTier] || 17);
+        estimatedTotal = panes * pricePerPane;
+      }
+    } else {
+      estimatedTotal = (state.panesMin || 0) + (state.storeysAdd || 0) + (state.addonTotal || 0);
+    }
+
+    const payload = {
+      propertyType:    state.propertyType,
+      firstName:       state.fname,
+      lastName:        state.lname,
+      phone:           state.phone,
+      email:           state.email,
+      suburb:          state.suburb,
+      businessName:    state.businessName,
+      businessAddress: state.businessAddress,
+      preferredTime:   state.preferredTime,
+      notes:           state.notes,
+      panes:           state.panes,
+      customPaneCount: state.customPaneCount,
+      storeys:         state.storeys,
+      addons:          state.addons,
+      addonTotal:      state.addonTotal,
+      frequency:       state.frequency,
+      scope:           state.scope,
+      estimatedTotal:  estimatedTotal,
+    };
+
+    try {
+      await fetch('https://services.leadconnectorhq.com/hooks/KZviLEojY7TgiPp41oQG/webhook-trigger/QcPbAo05897VJCmko5Nz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (e) {
+      // Silently continue — show success regardless to avoid blocking the user
+    }
+
+    btn.disabled = false;
+    lbl.textContent = state.propertyType === 'commercial' ? 'Book My Free Call' : 'Send My Quote Request';
     const overlay = document.getElementById('success-overlay');
     overlay.style.display = 'flex';
     overlay.style.removeProperty('display');
-    // In production, send form data to your backend/CRM here
-    // e.g. fetch('/api/quote', { method:'POST', body: JSON.stringify(state) })
   });
 
   function flashNotice(msg) {

@@ -35,7 +35,12 @@ createServer(async (req, res) => {
     try {
       const s = await stat(filePath);
       if (s.isDirectory()) finalPath = join(filePath, 'index.html');
-    } catch { /* not a directory */ }
+    } catch {
+      // Try appending .html for extension-less URLs (e.g. /about → /about.html)
+      if (!extname(filePath)) {
+        finalPath = filePath + '.html';
+      }
+    }
 
     const content = await readFile(finalPath);
     const ext = extname(finalPath).toLowerCase();

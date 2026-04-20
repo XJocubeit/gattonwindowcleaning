@@ -140,7 +140,7 @@
   }
 
   // Basic client-side validation + success state
-  document.addEventListener('submit', function (e) {
+  document.addEventListener('submit', async function (e) {
     if (!e.target || e.target.id !== 'gwc-contact-form') return;
     e.preventDefault();
 
@@ -158,19 +158,33 @@
       return;
     }
 
-    // Replace button with spinner while "submitting"
     const btn = document.getElementById('gwc-form-submit');
     btn.textContent = 'Sending…';
     btn.disabled = true;
     btn.style.opacity = '0.7';
 
-    // Simulate submission, swap out for your actual form handler (Formspree, Netlify, etc.)
-    setTimeout(() => {
-      form.reset();
-      btn.textContent = 'Send Message →';
-      btn.disabled = false;
-      btn.style.opacity = '1';
-      success.style.display = 'block';
-    }, 1200);
+    const payload = {
+      source:    'contact-form-component',
+      firstName: form.querySelector('[name="first_name"]').value.trim(),
+      lastName:  form.querySelector('[name="last_name"]').value.trim(),
+      phone:     form.querySelector('[name="phone"]').value.trim(),
+      email:     form.querySelector('[name="email"]').value.trim(),
+      service:   form.querySelector('[name="service"]').value,
+      message:   form.querySelector('[name="message"]').value.trim(),
+    };
+
+    try {
+      await fetch('https://services.leadconnectorhq.com/hooks/KZviLEojY7TgiPp41oQG/webhook-trigger/QcPbAo05897VJCmko5Nz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (_) {}
+
+    form.reset();
+    btn.textContent = 'Send Message →';
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    success.style.display = 'block';
   });
 })();
