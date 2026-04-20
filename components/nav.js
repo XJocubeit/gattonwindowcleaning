@@ -31,51 +31,51 @@
     <div style="display:flex;align-items:center;justify-content:space-between;height:5rem;">
 
       <!-- Logo -->
-      <a href="/index.html" style="flex-shrink:0;text-decoration:none;">
+      <a href="/" style="flex-shrink:0;text-decoration:none;">
         <img src="/Brand%20Assets/GWC%20(4).png" alt="Gatton Window Cleaning" style="height:7rem;width:auto;">
       </a>
 
       <!-- Desktop links -->
       <div class="gwc-nav-desktop" style="display:none;align-items:center;gap:2rem;">
-        <a href="/index.html" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;">Home</a>
+        <a href="/" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;">Home</a>
 
         <!-- Services dropdown -->
         <div class="gwc-dropdown" style="position:relative;">
-          <a href="/services.html" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;display:flex;align-items:center;gap:4px;">
+          <a href="/services" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;display:flex;align-items:center;gap:4px;">
             Services ${IC.chevron}
           </a>
           <div class="gwc-dropdown-menu" style="position:absolute;top:calc(100% + 8px);left:0;width:270px;background:#fff;border-radius:1rem;box-shadow:0 20px 60px rgba(0,0,0,0.15);padding:8px 0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);z-index:100;">
-            <a href="/residential.html" class="gwc-dropdown-item">${icon(IC.house)} Residential Window Cleaning</a>
-            <a href="/exterior-window-cleaning.html" class="gwc-dropdown-item">${icon(IC.window)} Exterior Window Cleaning</a>
-            <a href="/interior-window-cleaning.html" class="gwc-dropdown-item">${icon(IC.shine)} Interior Window Cleaning</a>
-            <a href="/screen-cleaning.html" class="gwc-dropdown-item">${icon(IC.screen)} Screen Cleaning</a>
-            <a href="/track-sill-frame-detailing.html" class="gwc-dropdown-item">${icon(IC.wrench)} Track, Sill &amp; Frame Detailing</a>
-            <a href="/commercial-window-cleaning.html" class="gwc-dropdown-item">${icon(IC.building)} Commercial Window Cleaning</a>
+            <a href="/residential" class="gwc-dropdown-item">${icon(IC.house)} Residential Window Cleaning</a>
+            <a href="/exterior-window-cleaning" class="gwc-dropdown-item">${icon(IC.window)} Exterior Window Cleaning</a>
+            <a href="/interior-window-cleaning" class="gwc-dropdown-item">${icon(IC.shine)} Interior Window Cleaning</a>
+            <a href="/screen-cleaning" class="gwc-dropdown-item">${icon(IC.screen)} Screen Cleaning</a>
+            <a href="/track-sill-frame-detailing" class="gwc-dropdown-item">${icon(IC.wrench)} Track, Sill &amp; Frame Detailing</a>
+            <a href="/commercial-window-cleaning" class="gwc-dropdown-item">${icon(IC.building)} Commercial Window Cleaning</a>
           </div>
         </div>
 
         <!-- Locations dropdown -->
         <div class="gwc-dropdown" style="position:relative;">
-          <a href="/locations/gatton.html" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;display:flex;align-items:center;gap:4px;">
+          <a href="/locations/gatton" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;display:flex;align-items:center;gap:4px;">
             Locations ${IC.chevron}
           </a>
           <div class="gwc-dropdown-menu" style="position:absolute;top:calc(100% + 8px);left:0;width:220px;background:#fff;border-radius:1rem;box-shadow:0 20px 60px rgba(0,0,0,0.15);padding:8px 0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all 0.2s cubic-bezier(0.34,1.56,0.64,1);z-index:100;">
-            <a href="/locations/gatton.html" class="gwc-dropdown-item">${icon(IC.pin)} Gatton</a>
-            <a href="/locations/laidley.html" class="gwc-dropdown-item">${icon(IC.pin)} Laidley</a>
-            <a href="/locations/plainlands.html" class="gwc-dropdown-item">${icon(IC.pin)} Plainlands</a>
-            <a href="/locations/forest-hill.html" class="gwc-dropdown-item">${icon(IC.pin)} Forest Hill</a>
-            <a href="/locations/hatton-vale.html" class="gwc-dropdown-item">${icon(IC.pin)} Hatton Vale</a>
-            <a href="/locations/grantham.html" class="gwc-dropdown-item">${icon(IC.pin)} Grantham</a>
-            <a href="/locations/adare.html" class="gwc-dropdown-item">${icon(IC.pin)} Adare</a>
-            <a href="/locations/regency-downs.html" class="gwc-dropdown-item">${icon(IC.pin)} Regency Downs</a>
-            <a href="/locations/woodlands.html" class="gwc-dropdown-item">${icon(IC.pin)} Woodlands</a>
-            <a href="/locations/helidon.html" class="gwc-dropdown-item">${icon(IC.pin)} Helidon</a>
+            <a href="/locations/gatton" class="gwc-dropdown-item">${icon(IC.pin)} Gatton</a>
+            <a href="/locations/laidley" class="gwc-dropdown-item">${icon(IC.pin)} Laidley</a>
+            <a href="/locations/plainlands" class="gwc-dropdown-item">${icon(IC.pin)} Plainlands</a>
+            <a href="/locations/forest-hill" class="gwc-dropdown-item">${icon(IC.pin)} Forest Hill</a>
+            <a href="/locations/hatton-vale" class="gwc-dropdown-item">${icon(IC.pin)} Hatton Vale</a>
+            <a href="/locations/grantham" class="gwc-dropdown-item">${icon(IC.pin)} Grantham</a>
+            <a href="/locations/adare" class="gwc-dropdown-item">${icon(IC.pin)} Adare</a>
+            <a href="/locations/regency-downs" class="gwc-dropdown-item">${icon(IC.pin)} Regency Downs</a>
+            <a href="/locations/woodlands" class="gwc-dropdown-item">${icon(IC.pin)} Woodlands</a>
+            <a href="/locations/helidon" class="gwc-dropdown-item">${icon(IC.pin)} Helidon</a>
           </div>
         </div>
 
-        <a href="/about.html" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;">About</a>
-        <a href="/blog.html" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;">Blog</a>
-        <a href="/contact.html" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;">Contact</a>
+        <a href="/about" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;">About</a>
+        <a href="/blog" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;">Blog</a>
+        <a href="/contact" class="gwc-nav-link" style="color:rgba(255,255,255,0.7);font-weight:600;font-size:0.875rem;text-decoration:none;">Contact</a>
       </div>
 
       <!-- Desktop CTA -->
@@ -84,7 +84,7 @@
           <svg style="width:1rem;height:1rem;" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
           0493 742 542
         </a>
-        <a href="/quote.html" style="background:#38b6ff;color:#fff;font-weight:700;font-size:0.875rem;padding:0.625rem 1.5rem;border-radius:0.75rem;text-decoration:none;box-shadow:0 4px 16px rgba(56,182,255,0.2);transition:background 0.2s;" onmouseover="this.style.background='#1fa8f5'" onmouseout="this.style.background='#38b6ff'">Get Your Free Quote</a>
+        <a href="/quote" style="background:#38b6ff;color:#fff;font-weight:700;font-size:0.875rem;padding:0.625rem 1.5rem;border-radius:0.75rem;text-decoration:none;box-shadow:0 4px 16px rgba(56,182,255,0.2);transition:background 0.2s;" onmouseover="this.style.background='#1fa8f5'" onmouseout="this.style.background='#38b6ff'">Get Your Free Quote</a>
       </div>
 
       <!-- Mobile hamburger -->
@@ -99,32 +99,32 @@
   <!-- Mobile menu -->
   <div id="gwc-mobile-menu" style="max-height:0;overflow:hidden;transition:max-height 0.35s ease;background:#0a0f1a;border-top:1px solid rgba(255,255,255,0.1);overflow-y:auto;-webkit-overflow-scrolling:touch;">
     <div style="max-width:80rem;margin:0 auto;padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:0.25rem;">
-      <a href="/index.html" class="gwc-mobile-link">Home</a>
-      <a href="/services.html" class="gwc-mobile-link">Services</a>
-      <a href="/residential.html" class="gwc-mobile-sublnk">→ Residential Window Cleaning</a>
-      <a href="/exterior-window-cleaning.html" class="gwc-mobile-sublnk">→ Exterior Window Cleaning</a>
-      <a href="/interior-window-cleaning.html" class="gwc-mobile-sublnk">→ Interior Window Cleaning</a>
-      <a href="/screen-cleaning.html" class="gwc-mobile-sublnk">→ Screen Cleaning</a>
-      <a href="/track-sill-frame-detailing.html" class="gwc-mobile-sublnk">→ Track, Sill &amp; Frame Detailing</a>
-      <a href="/commercial-window-cleaning.html" class="gwc-mobile-sublnk">→ Commercial Window Cleaning</a>
-      <a href="/locations/gatton.html" class="gwc-mobile-link" style="margin-top:0.5rem;">Locations</a>
-      <a href="/locations/gatton.html" class="gwc-mobile-sublnk">→ Gatton</a>
-      <a href="/locations/laidley.html" class="gwc-mobile-sublnk">→ Laidley</a>
-      <a href="/locations/plainlands.html" class="gwc-mobile-sublnk">→ Plainlands</a>
-      <a href="/locations/forest-hill.html" class="gwc-mobile-sublnk">→ Forest Hill</a>
-      <a href="/locations/hatton-vale.html" class="gwc-mobile-sublnk">→ Hatton Vale</a>
-      <a href="/locations/grantham.html" class="gwc-mobile-sublnk">→ Grantham</a>
-      <a href="/locations/adare.html" class="gwc-mobile-sublnk">→ Adare</a>
-      <a href="/locations/regency-downs.html" class="gwc-mobile-sublnk">→ Regency Downs</a>
-      <a href="/locations/woodlands.html" class="gwc-mobile-sublnk">→ Woodlands</a>
-      <a href="/locations/helidon.html" class="gwc-mobile-sublnk">→ Helidon</a>
-      <a href="/quote.html" class="gwc-mobile-link" style="margin-top:0.5rem;">Get Your Quote</a>
-      <a href="/about.html" class="gwc-mobile-link">About</a>
-      <a href="/blog.html" class="gwc-mobile-link">Blog</a>
-      <a href="/contact.html" class="gwc-mobile-link">Contact</a>
+      <a href="/" class="gwc-mobile-link">Home</a>
+      <a href="/services" class="gwc-mobile-link">Services</a>
+      <a href="/residential" class="gwc-mobile-sublnk">→ Residential Window Cleaning</a>
+      <a href="/exterior-window-cleaning" class="gwc-mobile-sublnk">→ Exterior Window Cleaning</a>
+      <a href="/interior-window-cleaning" class="gwc-mobile-sublnk">→ Interior Window Cleaning</a>
+      <a href="/screen-cleaning" class="gwc-mobile-sublnk">→ Screen Cleaning</a>
+      <a href="/track-sill-frame-detailing" class="gwc-mobile-sublnk">→ Track, Sill &amp; Frame Detailing</a>
+      <a href="/commercial-window-cleaning" class="gwc-mobile-sublnk">→ Commercial Window Cleaning</a>
+      <a href="/locations/gatton" class="gwc-mobile-link" style="margin-top:0.5rem;">Locations</a>
+      <a href="/locations/gatton" class="gwc-mobile-sublnk">→ Gatton</a>
+      <a href="/locations/laidley" class="gwc-mobile-sublnk">→ Laidley</a>
+      <a href="/locations/plainlands" class="gwc-mobile-sublnk">→ Plainlands</a>
+      <a href="/locations/forest-hill" class="gwc-mobile-sublnk">→ Forest Hill</a>
+      <a href="/locations/hatton-vale" class="gwc-mobile-sublnk">→ Hatton Vale</a>
+      <a href="/locations/grantham" class="gwc-mobile-sublnk">→ Grantham</a>
+      <a href="/locations/adare" class="gwc-mobile-sublnk">→ Adare</a>
+      <a href="/locations/regency-downs" class="gwc-mobile-sublnk">→ Regency Downs</a>
+      <a href="/locations/woodlands" class="gwc-mobile-sublnk">→ Woodlands</a>
+      <a href="/locations/helidon" class="gwc-mobile-sublnk">→ Helidon</a>
+      <a href="/quote" class="gwc-mobile-link" style="margin-top:0.5rem;">Get Your Quote</a>
+      <a href="/about" class="gwc-mobile-link">About</a>
+      <a href="/blog" class="gwc-mobile-link">Blog</a>
+      <a href="/contact" class="gwc-mobile-link">Contact</a>
       <div style="padding-top:1rem;padding-bottom:0.5rem;display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
         <a href="tel:0493742542" style="border:1px solid rgba(56,182,255,0.4);color:#38b6ff;font-weight:700;text-align:center;padding:0.75rem;border-radius:0.75rem;font-size:0.875rem;text-decoration:none;">Call Now</a>
-        <a href="/quote.html" style="background:#38b6ff;color:#fff;font-weight:700;text-align:center;padding:0.75rem;border-radius:0.75rem;font-size:0.875rem;text-decoration:none;">Get Your Free Quote</a>
+        <a href="/quote" style="background:#38b6ff;color:#fff;font-weight:700;text-align:center;padding:0.75rem;border-radius:0.75rem;font-size:0.875rem;text-decoration:none;">Get Your Free Quote</a>
       </div>
     </div>
   </div>

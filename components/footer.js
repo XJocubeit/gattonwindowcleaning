@@ -20,35 +20,35 @@
     <div>
       <h4 style="color:#fff;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.25rem;">Services</h4>
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;font-size:0.875rem;">
-        <li><a href="/exterior-window-cleaning.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Exterior Window Cleaning</a></li>
-        <li><a href="/interior-window-cleaning.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Interior Window Cleaning</a></li>
-        <li><a href="/screen-cleaning.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Screen Cleaning</a></li>
-        <li><a href="/track-sill-frame-detailing.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Track, Sill &amp; Frame Detailing</a></li>
-        <li><a href="/commercial-window-cleaning.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Commercial Window Cleaning</a></li>
+        <li><a href="/exterior-window-cleaning" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Exterior Window Cleaning</a></li>
+        <li><a href="/interior-window-cleaning" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Interior Window Cleaning</a></li>
+        <li><a href="/screen-cleaning" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Screen Cleaning</a></li>
+        <li><a href="/track-sill-frame-detailing" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Track, Sill &amp; Frame Detailing</a></li>
+        <li><a href="/commercial-window-cleaning" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Commercial Window Cleaning</a></li>
       </ul>
     </div>
     <div>
       <h4 style="color:#fff;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.25rem;">Quick Links</h4>
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;font-size:0.875rem;">
-        <li><a href="/quote.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Get Your Free Quote</a></li>
-        <li><a href="/services.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">All Services</a></li>
-        <li><a href="/blog.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Blog</a></li>
-        <li><a href="/contact.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Contact Us</a></li>
+        <li><a href="/quote" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Get Your Free Quote</a></li>
+        <li><a href="/services" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">All Services</a></li>
+        <li><a href="/blog" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Blog</a></li>
+        <li><a href="/contact" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Contact Us</a></li>
       </ul>
     </div>
   </div>
   <div style="max-width:80rem;margin:0 auto;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.05);">
     <h4 style="color:#fff;font-weight:700;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">Locations</h4>
     <p style="font-size:0.875rem;line-height:1.75;display:flex;flex-wrap:wrap;gap:0.5rem;">
-      <a href="/locations/gatton.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Gatton</a><span style="color:rgba(255,255,255,0.2);">·</span>
-      <a href="/locations/laidley.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Laidley</a><span style="color:rgba(255,255,255,0.2);">·</span>
-      <a href="/locations/plainlands.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Plainlands</a><span style="color:rgba(255,255,255,0.2);">·</span>
-      <a href="/locations/forest-hill.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Forest Hill</a><span style="color:rgba(255,255,255,0.2);">·</span>
-      <a href="/locations/hatton-vale.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Hatton Vale</a><span style="color:rgba(255,255,255,0.2);">·</span>
-      <a href="/locations/grantham.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Grantham</a><span style="color:rgba(255,255,255,0.2);">·</span>
-      <a href="/locations/adare.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Adare</a><span style="color:rgba(255,255,255,0.2);">·</span>
-      <a href="/locations/regency-downs.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Regency Downs</a><span style="color:rgba(255,255,255,0.2);">·</span>
-      <a href="/locations/woodlands.html" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Woodlands</a>
+      <a href="/locations/gatton" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Gatton</a><span style="color:rgba(255,255,255,0.2);">·</span>
+      <a href="/locations/laidley" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Laidley</a><span style="color:rgba(255,255,255,0.2);">·</span>
+      <a href="/locations/plainlands" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Plainlands</a><span style="color:rgba(255,255,255,0.2);">·</span>
+      <a href="/locations/forest-hill" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Forest Hill</a><span style="color:rgba(255,255,255,0.2);">·</span>
+      <a href="/locations/hatton-vale" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Hatton Vale</a><span style="color:rgba(255,255,255,0.2);">·</span>
+      <a href="/locations/grantham" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Grantham</a><span style="color:rgba(255,255,255,0.2);">·</span>
+      <a href="/locations/adare" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Adare</a><span style="color:rgba(255,255,255,0.2);">·</span>
+      <a href="/locations/regency-downs" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Regency Downs</a><span style="color:rgba(255,255,255,0.2);">·</span>
+      <a href="/locations/woodlands" style="color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Woodlands</a>
     </p>
   </div>
   <!-- Guarantee strip -->
@@ -73,9 +73,9 @@
   <div style="max-width:80rem;margin:0 auto;padding-top:2rem;display:flex;flex-direction:column;gap:0.75rem;align-items:flex-start;justify-content:space-between;">
     <p style="font-size:0.75rem;color:rgba(255,255,255,0.25);">&copy; 2026 Gatton Window Cleaning. All rights reserved. Servicing the Lockyer Valley, Queensland.</p>
     <div style="display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;">
-      <a href="/terms.html" style="color:rgba(255,255,255,0.3);font-size:0.75rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Terms of Service</a>
-      <a href="/privacy.html" style="color:rgba(255,255,255,0.3);font-size:0.75rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Privacy Policy</a>
-      <a href="/quote.html" style="color:#38b6ff;font-size:0.75rem;font-weight:700;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Get Your Free Quote &rarr;</a>
+      <a href="/terms" style="color:rgba(255,255,255,0.3);font-size:0.75rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Terms of Service</a>
+      <a href="/privacy" style="color:rgba(255,255,255,0.3);font-size:0.75rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.6)'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">Privacy Policy</a>
+      <a href="/quote" style="color:#38b6ff;font-size:0.75rem;font-weight:700;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Get Your Free Quote &rarr;</a>
     </div>
   </div>
   <style>
