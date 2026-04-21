@@ -29,15 +29,23 @@
     "@type": "LocalBusiness",
     "name": "Gatton Window Cleaning",
     "alternateName": "GWC",
-    "telephone": "0493742542",
+    "telephone": "+61493742542",
     "email": "hello@gattonwindowcleaning.com.au",
     "url": "https://gattonwindowcleaning.com.au",
+    "logo": "https://gattonwindowcleaning.com.au/Brand%20Assets/GWC%20(4).png",
     "image": "https://gattonwindowcleaning.com.au/Brand%20Assets/19.png",
     "founder": { "@type": "Person", "name": "Xavier" },
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Lockyer Valley"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Gatton" },
+      { "@type": "City", "name": "Laidley" },
+      { "@type": "City", "name": "Plainlands" },
+      { "@type": "City", "name": "Forest Hill" },
+      { "@type": "City", "name": "Hatton Vale" },
+      { "@type": "City", "name": "Grantham" },
+      { "@type": "City", "name": "Helidon" },
+      { "@type": "City", "name": "Lowood" },
+      { "@type": "AdministrativeArea", "name": "Lockyer Valley" }
+    ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Gatton",
@@ -50,10 +58,27 @@
       "latitude": -27.5597,
       "longitude": 152.3357
     },
-    "openingHours": "Mo-Sa 07:00-17:00",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    ],
     "priceRange": "$$",
     "description": "Professional residential and commercial window cleaning across the Lockyer Valley. Streak-free results, every time.",
-    "serviceType": ["Residential Window Cleaning", "Commercial Window Cleaning", "Screen Cleaning", "Track and Sill Cleaning"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Window Cleaning Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Exterior Window Cleaning", "url": "https://gattonwindowcleaning.com.au/exterior-window-cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interior Window Cleaning", "url": "https://gattonwindowcleaning.com.au/interior-window-cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Screen Cleaning", "url": "https://gattonwindowcleaning.com.au/screen-cleaning" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Track, Sill & Frame Detailing", "url": "https://gattonwindowcleaning.com.au/track-sill-frame-detailing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial Window Cleaning", "url": "https://gattonwindowcleaning.com.au/commercial-window-cleaning" } }
+      ]
+    },
     "sameAs": [
       "https://www.facebook.com/gattonwindowcleaning",
       "https://www.instagram.com/gattonwindowcleaning"
