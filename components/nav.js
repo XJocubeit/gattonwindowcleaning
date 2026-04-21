@@ -32,7 +32,7 @@
 
       <!-- Logo -->
       <a href="/" style="flex-shrink:0;text-decoration:none;">
-        <img src="/Brand%20Assets/GWC%20(4).png" alt="Gatton Window Cleaning" style="height:7rem;width:auto;">
+        <img src="/Brand%20Assets/GWC%20(4).png" alt="Gatton Window Cleaning" style="height:7rem;width:auto;" width="1000" height="1000" fetchpriority="high">
       </a>
 
       <!-- Desktop links -->

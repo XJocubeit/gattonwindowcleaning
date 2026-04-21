@@ -83,8 +83,8 @@
         </div>
 
         <div>
-          <label style="display:block;font-size:0.75rem;font-weight:600;color:#374151;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.4rem;font-family:'Poppins',sans-serif;">Service</label>
-          <select name="service"
+          <label for="gwc-service" style="display:block;font-size:0.75rem;font-weight:600;color:#374151;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.4rem;font-family:'Poppins',sans-serif;">Service</label>
+          <select id="gwc-service" name="service"
             style="width:100%;border:1.5px solid #e8f5ff;border-radius:0.75rem;padding:0.75rem 1rem;font-size:0.875rem;font-family:'Poppins',sans-serif;color:#0a0f1a;outline:none;transition:border-color 0.2s;box-sizing:border-box;background:#fff;appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%2338b6ff' viewBox='0 0 24 24'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 1rem center;background-size:1rem;"
             onfocus="this.style.borderColor='#38b6ff'" onblur="this.style.borderColor='#e8f5ff'">
             <option value="">Select a service…</option>

@@ -56,7 +56,21 @@
       "Bash(sed -i '' 's|\"image\": \"https://placehold.co/1200x630/0a0f1a/38b6ff?text=How+Often+Clean+Windows\"|\"image\": \"https://gattonwindowcleaning.com/Images/DSC04608.jpg\"|g' blog-how-often-clean-windows-lockyer-valley.html)",
       "Bash(sed -i '' 's|\"image\": \"https://placehold.co/1200x630/0a0f1a/38b6ff?text=4-Step+Window+Cleaning+Process\"|\"image\": \"https://gattonwindowcleaning.com/Images/XavierCleaning.jpg\"|g' blog-4-step-process-gatton-lockyer-valley.html)",
       "Bash(sips -g pixelWidth -g pixelHeight \"/Users/xavierjocubeit/VScode/Images/Commerical.webp\")",
-      "Bash(awk '{print $2}')"
+      "Bash(awk '{print $2}')",
+      "Bash(sips -g pixelWidth -g pixelHeight \"Brand Assets/GWC \\(4\\).png\" \"Brand Assets/19.png\")",
+      "Bash(sips -g pixelWidth -g pixelHeight \"Brand Assets/GWC \\(4\\).png\")",
+      "Bash(sips -Z 700 --setProperty formatOptions 65 Images/Detail.jpg)",
+      "Bash(sips -Z 700 --setProperty formatOptions 65 Images/XavierCleaning.jpg)",
+      "Bash(sips -Z 700 --setProperty formatOptions 65 Images/Sqeegee.jpg)",
+      "Bash(sips -Z 800 --setProperty formatOptions 65 Images/ScreenCleaning2.jpg)",
+      "Bash(xargs -0 sed -i '' 's|</head>|<link rel=\"preload\" as=\"image\" href=\"/Brand%20Assets/GWC%20\\(4\\).png\" fetchpriority=\"high\">\\\\n</head>|g')",
+      "Bash(xargs -0 sed -i '' 's|<script src=\"/components/nav.js\"></script>|<script src=\"/components/nav.js\" defer></script>|g' echo \"Done\" grep -rL \"preload.*GWC\" /Users/xavierjocubeit/VScode --include=\"*.html\")",
+      "Bash(sips -g pixelWidth -g pixelHeight Images/Detail.jpg Images/XavierCleaning.jpg Images/Sqeegee.jpg Images/ScreenCleaning2.jpg)",
+      "Bash(sed -i '' 's|width=\"853\" height=\"1280\"|width=\"466\" height=\"700\"|g' /Users/xavierjocubeit/VScode/index.html)",
+      "Bash(sed -i '' 's|width=\"1280\" height=\"802\"|width=\"800\" height=\"501\"|g' /Users/xavierjocubeit/VScode/index.html)",
+      "Bash(sips -g pixelWidth -g pixelHeight Images/Glass.jpg \"Images/Cleaning Glass.jpg\")",
+      "Bash(sips -Z 700 --setProperty formatOptions 65 Images/Glass.jpg)",
+      "Bash(sips -Z 700 --setProperty formatOptions 65 \"Images/Cleaning Glass.jpg\")"
     ]
   }
 }

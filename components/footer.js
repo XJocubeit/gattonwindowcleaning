@@ -10,7 +10,7 @@
 <footer style="background:#06090f;color:rgba(255,255,255,0.5);padding:4rem 1.5rem;border-top:1px solid rgba(255,255,255,0.05);">
   <div style="max-width:80rem;margin:0 auto;display:grid;gap:2.5rem;grid-template-columns:1fr;margin-bottom:3rem;" class="footer-grid">
     <div style="grid-column:span 2;">
-      <img src="/Brand%20Assets/19.png" alt="Gatton Window Cleaning" style="height:3rem;width:auto;margin-bottom:1rem;">
+      <img src="/Brand%20Assets/19.png" alt="Gatton Window Cleaning" style="height:3rem;width:auto;margin-bottom:1rem;" width="1000" height="1000" loading="lazy">
       <p style="font-size:0.875rem;line-height:1.75;max-width:24rem;">Professional window cleaning across the Lockyer Valley. Residential, commercial, screens, tracks &amp; frames, done properly.</p>
       <div style="display:flex;gap:1rem;margin-top:1.25rem;flex-wrap:wrap;">
         <a href="tel:0493742542" style="font-size:0.875rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">0493 742 542</a>
