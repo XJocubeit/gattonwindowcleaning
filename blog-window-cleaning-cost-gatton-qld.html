@@ -103,7 +103,7 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Poppins', sans-serif; background: #f4f9ff; color: #0a0f1a; }
@@ -163,7 +163,7 @@
   <article class="flex-1 min-w-0">
 
     <div class="relative rounded-2xl overflow-hidden mb-8" style="height:360px;">
-      <img src="/Images/XavierCleaning.jpg" alt="Window cleaning cost in Gatton and Lockyer Valley" class="w-full h-full object-cover">
+      <img src="/Images/XavierCleaning.jpg" alt="Window cleaning cost in Gatton and Lockyer Valley" class="w-full h-full object-cover" loading="lazy">
       <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.5) 0%,transparent 60%)"></div>
     </div>
 
@@ -356,7 +356,7 @@
 
     <!-- Author Box -->
     <div class="mt-10 bg-white rounded-2xl p-6 flex items-start gap-4 border border-[#e5e7eb]">
-      <img src="/Images/Xavier.jpg" alt="Xavier, Gatton Window Cleaning" class="w-16 h-16 rounded-full object-cover flex-shrink-0" style="object-position:top center;">
+      <img src="/Images/Xavier.jpg" alt="Xavier, Gatton Window Cleaning" class="w-16 h-16 rounded-full object-cover flex-shrink-0" style="object-position:top center;" loading="lazy">
       <div>
         <p class="font-bold text-[#0a0f1a]">Xavier</p>
         <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-wider mb-2">Owner, Gatton Window Cleaning</p>
@@ -380,14 +380,14 @@
       <h3 class="font-anton text-2xl text-[#0a0f1a] mb-6">RELATED ARTICLES</h3>
       <div class="grid gap-6 md:grid-cols-2">
         <a href="/blog-how-often-clean-windows-lockyer-valley" class="bg-white rounded-xl overflow-hidden border border-[#e5e7eb] hover:shadow-lg transition-shadow group">
-          <img src="/Images/DSC04608.jpg" alt="" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="/Images/DSC04608.jpg" alt="" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
           <div class="p-4">
             <span class="tag mb-2 block w-max">Tips & Guides</span>
             <p class="font-semibold text-sm text-[#0a0f1a]">How Often Should You Clean Your Windows? A Lockyer Valley Guide</p>
           </div>
         </a>
         <a href="/blog-dirty-window-tracks-guide" class="bg-white rounded-xl overflow-hidden border border-[#e5e7eb] hover:shadow-lg transition-shadow group">
-          <img src="/Images/Seals and Tracks.jpg" alt="" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="/Images/Seals and Tracks.jpg" alt="" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
           <div class="p-4">
             <span class="tag mb-2 block w-max">Maintenance</span>
             <p class="font-semibold text-sm text-[#0a0f1a]">Dirty Window Tracks? Here's Why It Matters More Than You Think</p>

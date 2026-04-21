@@ -101,7 +101,7 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Poppins', sans-serif; background: #f4f9ff; color: #0a0f1a; }
@@ -209,7 +209,7 @@
     src="/Images/XavierCleaning.jpg"
     alt="Professional window cleaning in Gatton and the Lockyer Valley, hero image"
     class="absolute inset-0 w-full h-full object-cover opacity-40"
-  >
+   loading="lazy">
   <!-- Gradient overlay -->
   <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(10,15,26,0.2) 0%, rgba(10,15,26,0.75) 100%);"></div>
   <!-- Radial glow accent -->
@@ -254,7 +254,7 @@
         alt="Professional window cleaner working on a home in the Lockyer Valley, Queensland"
         class="blog-img h-full w-full object-cover rounded-2xl"
         style="border-radius:1rem;"
-      >
+       loading="lazy">
       <div class="absolute inset-0 rounded-2xl" style="background: linear-gradient(to top, rgba(10,15,26,0.55) 0%, transparent 55%);"></div>
       <p class="absolute bottom-4 left-5 right-5 text-white/80 text-sm font-medium">Gatton Window Cleaning, servicing Gatton, Laidley, Helidon, Forest Hill, Plainlands &amp; surrounds.</p>
     </div>
@@ -288,7 +288,7 @@
           alt="Scenic Lockyer Valley Queensland landscape, agricultural land, red dust, and farmland conditions that affect window cleaning"
           class="blog-img w-full h-full object-cover"
           style="border-radius:1rem;"
-        >
+         loading="lazy">
         <div class="absolute inset-0 rounded-2xl" style="background: linear-gradient(to top, rgba(10,15,26,0.45) 0%, transparent 50%);"></div>
         <p class="absolute bottom-4 left-5 text-white/70 text-sm">The Lockyer Valley's unique conditions, red dust, pollen, hard water, demand a proper professional process.</p>
       </div>
@@ -304,7 +304,7 @@
           alt="Window frame cleaning in Gatton, brushing and wiping frames before glass cleaning to prevent streaks"
           class="blog-img w-full h-full object-cover"
           style="border-radius:1rem;"
-        >
+         loading="lazy">
         <div class="absolute inset-0 rounded-2xl" style="background: linear-gradient(to top, rgba(10,15,26,0.4) 0%, transparent 50%);"></div>
       </div>
 
@@ -348,7 +348,7 @@
         alt="Removing cobwebs and dust from window frames on a Lockyer Valley home before professional glass cleaning"
         class="blog-img w-full h-full object-cover"
         style="border-radius:1rem;"
-      >
+       loading="lazy">
       <div class="absolute inset-0 rounded-2xl" style="background:linear-gradient(to top, rgba(10,15,26,0.35) 0%, transparent 55%);"></div>
     </div>
 
@@ -362,7 +362,7 @@
           alt="Professional window track and sill cleaning in Lockyer Valley, removing red dust, mould and debris from window channels"
           class="blog-img w-full h-full object-cover"
           style="border-radius:1rem;"
-        >
+         loading="lazy">
         <div class="absolute inset-0 rounded-2xl" style="background: linear-gradient(to top, rgba(10,15,26,0.4) 0%, transparent 50%);"></div>
       </div>
 
@@ -411,7 +411,7 @@
           alt="Professional squeegee and scrubber glass cleaning technique used by Gatton Window Cleaning on Lockyer Valley homes"
           class="blog-img w-full h-full object-cover"
           style="border-radius:1rem;"
-        >
+         loading="lazy">
         <div class="absolute inset-0 rounded-2xl" style="background: linear-gradient(to top, rgba(10,15,26,0.4) 0%, transparent 50%);"></div>
       </div>
 
@@ -441,7 +441,7 @@
           alt="Professional squeegee technique for streak-free window cleaning, overlapping strokes with blade wiped after every pull"
           class="blog-img w-full h-full object-cover"
           style="border-radius:1rem;"
-        >
+         loading="lazy">
         <div class="absolute inset-0 rounded-2xl" style="background:linear-gradient(to top, rgba(10,15,26,0.3) 0%, transparent 55%);"></div>
       </div>
 
@@ -472,7 +472,7 @@
           alt="Hand detailing and final inspection of windows, catching corners and checking glass-to-seal junctions on every Gatton home"
           class="blog-img w-full h-full object-cover"
           style="border-radius:1rem;"
-        >
+         loading="lazy">
         <div class="absolute inset-0 rounded-2xl" style="background: linear-gradient(to top, rgba(10,15,26,0.4) 0%, transparent 50%);"></div>
       </div>
 
@@ -517,7 +517,7 @@
         alt="Spotless, streak-free windows on a Gatton home after professional window cleaning, Lockyer Valley residential service"
         class="blog-img w-full h-full object-cover"
         style="border-radius:1rem;"
-      >
+       loading="lazy">
       <div class="absolute inset-0 rounded-2xl" style="background:linear-gradient(to top, rgba(10,15,26,0.3) 0%, transparent 55%);"></div>
     </div>
 
@@ -551,7 +551,7 @@
           alt="Book professional window cleaning in Gatton, Laidley and the Lockyer Valley, residential and commercial services"
           class="blog-img w-full h-full object-cover"
           style="border-radius:1rem;"
-        >
+         loading="lazy">
         <div class="absolute inset-0 rounded-2xl" style="background: linear-gradient(to right, rgba(10,15,26,0.72) 0%, rgba(10,15,26,0.3) 100%);"></div>
         <div class="absolute inset-0 flex flex-col justify-center px-8">
           <p class="text-[#38b6ff] font-semibold text-sm uppercase tracking-widest mb-1">Serving Gatton, Laidley, Helidon &amp; surrounds</p>
@@ -583,7 +583,7 @@
 
     <!-- AUTHOR BOX -->
     <div class="bg-white rounded-2xl p-6 flex items-start gap-5 border border-[#e5e7eb] mb-10" style="box-shadow:0 2px 16px rgba(10,15,26,0.06);">
-      <img src="/Images/Xavier.jpg" alt="Xavier, owner of Gatton Window Cleaning" class="w-16 h-16 rounded-full object-cover flex-shrink-0" style="object-position:top center;">
+      <img src="/Images/Xavier.jpg" alt="Xavier, owner of Gatton Window Cleaning" class="w-16 h-16 rounded-full object-cover flex-shrink-0" style="object-position:top center;" loading="lazy">
       <div>
         <p class="font-bold text-[#0a0f1a]">Xavier</p>
         <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-wider mb-2">Owner, Gatton Window Cleaning</p>
@@ -597,7 +597,7 @@
       <div class="grid gap-5 sm:grid-cols-3">
         <a href="/blog-how-often-clean-windows-lockyer-valley" class="related-card">
           <div style="overflow:hidden; height:160px;">
-            <img src="/Images/DSC04608.jpg" alt="How often should you clean your windows in the Lockyer Valley" class="w-full h-full object-cover" style="border-radius:0;">
+            <img src="/Images/DSC04608.jpg" alt="How often should you clean your windows in the Lockyer Valley" class="w-full h-full object-cover" style="border-radius:0;" loading="lazy">
           </div>
           <div class="p-4">
             <span class="tag mb-2 block w-max">Tips &amp; Guides</span>
@@ -606,7 +606,7 @@
         </a>
         <a href="/blog-window-cleaning-cost-gatton-qld" class="related-card">
           <div style="overflow:hidden; height:160px;">
-            <img src="/Images/XavierCleaning.jpg" alt="Window cleaning cost guide for Gatton QLD 2026" class="w-full h-full object-cover" style="border-radius:0;">
+            <img src="/Images/XavierCleaning.jpg" alt="Window cleaning cost guide for Gatton QLD 2026" class="w-full h-full object-cover" style="border-radius:0;" loading="lazy">
           </div>
           <div class="p-4">
             <span class="tag mb-2 block w-max">Pricing</span>
@@ -615,7 +615,7 @@
         </a>
         <a href="/blog-dirty-window-tracks-guide" class="related-card">
           <div style="overflow:hidden; height:160px;">
-            <img src="/Images/Seals and Tracks.jpg" alt="Guide to dirty window tracks, Lockyer Valley homes" class="w-full h-full object-cover" style="border-radius:0;">
+            <img src="/Images/Seals and Tracks.jpg" alt="Guide to dirty window tracks, Lockyer Valley homes" class="w-full h-full object-cover" style="border-radius:0;" loading="lazy">
           </div>
           <div class="p-4">
             <span class="tag mb-2 block w-max">Maintenance</span>

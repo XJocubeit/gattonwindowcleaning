@@ -53,7 +53,7 @@
     ]
   }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -129,7 +129,7 @@
 
 <!-- ══════════════════════════ HERO ══════════════════════════ -->
 <section class="relative min-h-screen flex items-end overflow-hidden" style="background:#0a0f1a;">
-  <img src="/Images/DSC04025.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center" style="opacity:0.35;">
+  <img src="/Images/DSC04025.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center" style="opacity:0.35;" loading="lazy">
   <div class="absolute inset-0" style="background:linear-gradient(100deg,rgba(10,15,26,0.97) 0%,rgba(10,15,26,0.82) 50%,rgba(10,15,26,0.5) 100%);"></div>
   <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 80% 70% at 60% 40%,rgba(56,182,255,0.08) 0%,transparent 70%);"></div>
 
@@ -176,7 +176,7 @@
       <!-- Image with floating stat cards -->
       <div class="relative">
         <div class="rounded-3xl overflow-hidden" style="box-shadow:0 24px 80px rgba(10,15,26,0.18);">
-          <img src="/Images/Xavier.jpg" alt="Xavier, owner of Gatton Window Cleaning" class="w-full h-auto block">
+          <img src="/Images/Xavier.jpg" alt="Xavier, owner of Gatton Window Cleaning" class="w-full h-auto block" loading="lazy">
         </div>
         <!-- Stat card bottom-left -->
         <div class="absolute -bottom-5 -left-5 bg-[#ffbf00] text-[#0a0f1a] rounded-2xl px-5 py-4 shadow-xl" style="box-shadow:0 8px 32px rgba(255,191,0,0.35);">

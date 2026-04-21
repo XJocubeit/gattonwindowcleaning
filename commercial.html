@@ -27,7 +27,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Poppins',sans-serif;background:#0a0f1a;color:#f4f9ff}
@@ -167,7 +167,7 @@
       </div>
 
       <div class="relative rounded-3xl overflow-hidden" style="aspect-ratio:4/3">
-        <img src="https://placehold.co/800x600/0a0f1a/38b6ff?text=Commercial+Premises" alt="Commercial window cleaning" class="w-full h-full object-cover">
+        <img src="https://placehold.co/800x600/0a0f1a/38b6ff?text=Commercial+Premises" alt="Commercial window cleaning" class="w-full h-full object-cover" loading="lazy">
         <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.55) 0%,transparent 55%)"></div>
         <div class="absolute bottom-6 left-6">
           <div class="px-4 py-2 rounded-xl text-xs font-bold text-white" style="background:rgba(56,182,255,0.85)">Lockyer Valley's Commercial Window Specialists</div>
@@ -327,7 +327,7 @@
         <div style="position:absolute;top:-60px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(56,182,255,0.09) 0%,transparent 70%)"></div>
       </div>
       <div class="relative">
-        <img src="/Brand%20Assets/8.png" alt="" class="h-10 w-auto mx-auto mb-5 opacity-80">
+        <img src="/Brand%20Assets/8.png" alt="" class="h-10 w-auto mx-auto mb-5 opacity-80" loading="lazy">
         <h2 class="anton text-4xl md:text-5xl text-white mb-4" style="letter-spacing:-0.02em">READY TO BOOK YOUR COMMERCIAL CLEAN?</h2>
         <p class="text-white/50 text-base max-w-xl mx-auto mb-10" style="line-height:1.7">
           Get in touch for a fast, no-obligation commercial quote. Xavier responds promptly and can usually turn around a quote within 24 hours.

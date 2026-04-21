@@ -50,7 +50,7 @@
     }
   }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -158,7 +158,7 @@
 <!-- ══════════════════════════ HERO ══════════════════════════ -->
 <section class="relative min-h-screen flex items-end overflow-hidden grain">
   <div class="absolute inset-0">
-    <img src="/Images/DSC04674.jpg" alt="" class="w-full h-full object-cover">
+    <img src="/Images/DSC04674.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
     <div class="hero-overlay absolute inset-0"></div>
     <!-- Radial accent glow -->
     <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse 60% 60% at 80% 50%, rgba(56,182,255,0.07) 0%, transparent 70%)"></div>
@@ -199,7 +199,7 @@
   </div>
 
   <div class="absolute bottom-8 right-8 opacity-15 hidden lg:block">
-    <img src="/Brand%20Assets/8.png" alt="" class="h-28 w-auto">
+    <img src="/Brand%20Assets/8.png" alt="" class="h-28 w-auto" loading="lazy">
   </div>
 </section>
 
@@ -283,7 +283,7 @@
       </div>
       <div class="relative">
         <div class="rounded-2xl overflow-hidden" style="height:460px;box-shadow:0 24px 80px rgba(10,15,26,0.15), 0 4px 16px rgba(56,182,255,0.08);">
-          <img src="/Images/DSC04025.jpg" alt="Professional window cleaning service in Plainlands QLD 4341" class="w-full h-full object-cover">
+          <img src="/Images/DSC04025.jpg" alt="Professional window cleaning service in Plainlands QLD 4341" class="w-full h-full object-cover" loading="lazy">
           <div class="absolute inset-0 rounded-2xl" style="background:linear-gradient(to top, rgba(10,15,26,0.45) 0%, transparent 55%)"></div>
         </div>
         <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 border border-[#e8f5ff]" style="box-shadow:0 12px 48px rgba(56,182,255,0.14)">
@@ -496,7 +496,7 @@
         <p class="text-[#374151]/50 text-xs font-semibold uppercase tracking-wider mb-4">New Build · Plainlands Estate</p>
         <p class="text-[#374151] text-sm leading-relaxed mb-6">"New build, had builder's dust everywhere on the windows. Xavier made them look brand new. Efficient and thorough, will be a regular."</p>
         <div class="flex items-center gap-3 pt-4 border-t border-[#e8f5ff]">
-          <img src="https://placehold.co/48x48/0a0f1a/38b6ff?text=BW" alt="" class="w-11 h-11 rounded-full object-cover">
+          <img src="https://placehold.co/48x48/0a0f1a/38b6ff?text=BW" alt="" class="w-11 h-11 rounded-full object-cover" loading="lazy">
           <div>
             <p class="font-bold text-sm text-[#0a0f1a]">Ben W.</p>
             <p class="text-xs text-[#38b6ff] font-semibold">Plainlands, QLD 4341</p>
@@ -509,7 +509,7 @@
         <p class="text-[#374151]/50 text-xs font-semibold uppercase tracking-wider mb-4">Residential · Plainlands</p>
         <p class="text-[#374151] text-sm leading-relaxed mb-6">"Really impressed, cleaned all our screens too without being asked. The whole place looks different when the light comes through properly."</p>
         <div class="flex items-center gap-3 pt-4 border-t border-[#e8f5ff]">
-          <img src="https://placehold.co/48x48/0a0f1a/38b6ff?text=AR" alt="" class="w-11 h-11 rounded-full object-cover">
+          <img src="https://placehold.co/48x48/0a0f1a/38b6ff?text=AR" alt="" class="w-11 h-11 rounded-full object-cover" loading="lazy">
           <div>
             <p class="font-bold text-sm text-[#0a0f1a]">Amy R.</p>
             <p class="text-xs text-[#38b6ff] font-semibold">Plainlands, QLD 4341</p>
@@ -522,7 +522,7 @@
         <p class="text-[#374151]/50 text-xs font-semibold uppercase tracking-wider mb-4">Acreage · Plainlands</p>
         <p class="text-[#374151] text-sm leading-relaxed mb-6">"On time, professional, and the tracks were cleaned too. First time I've seen them properly clean since we moved in. Plainlands dust is no joke."</p>
         <div class="flex items-center gap-3 pt-4 border-t border-[#e8f5ff]">
-          <img src="https://placehold.co/48x48/0a0f1a/38b6ff?text=CP" alt="" class="w-11 h-11 rounded-full object-cover">
+          <img src="https://placehold.co/48x48/0a0f1a/38b6ff?text=CP" alt="" class="w-11 h-11 rounded-full object-cover" loading="lazy">
           <div>
             <p class="font-bold text-sm text-[#0a0f1a]">Chris P.</p>
             <p class="text-xs text-[#38b6ff] font-semibold">Plainlands, QLD 4341</p>
@@ -551,7 +551,7 @@
 
       <div class="step-card group">
         <div class="relative overflow-hidden" style="height:200px;">
-          <img src="/Images/Frames.jpg" alt="Step 1 Frames" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="object-position: 50% 65%;">
+          <img src="/Images/Frames.jpg" alt="Step 1 Frames" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="object-position: 50% 65%;" loading="lazy">
           <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.7) 0%,transparent 60%)"></div>
           <div class="absolute top-4 left-4 w-10 h-10 bg-[#38b6ff] rounded-full flex items-center justify-center" style="box-shadow:0 4px 16px rgba(56,182,255,0.4)">
             <span class="font-anton text-[#0a0f1a] text-xl leading-none">1</span>
@@ -565,7 +565,7 @@
 
       <div class="step-card group">
         <div class="relative overflow-hidden" style="height:200px;">
-          <img src="/Images/Seals and Tracks.jpg" alt="Step 2 Tracks" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <img src="/Images/Seals and Tracks.jpg" alt="Step 2 Tracks" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
           <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.7) 0%,transparent 60%)"></div>
           <div class="absolute top-4 left-4 w-10 h-10 bg-[#38b6ff] rounded-full flex items-center justify-center" style="box-shadow:0 4px 16px rgba(56,182,255,0.4)">
             <span class="font-anton text-[#0a0f1a] text-xl leading-none">2</span>
@@ -579,7 +579,7 @@
 
       <div class="step-card group">
         <div class="relative overflow-hidden" style="height:200px;">
-          <img src="/Images/Glass.jpg" alt="Step 3 Glass" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          <img src="/Images/Glass.jpg" alt="Step 3 Glass" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
           <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.7) 0%,transparent 60%)"></div>
           <div class="absolute top-4 left-4 w-10 h-10 bg-[#38b6ff] rounded-full flex items-center justify-center" style="box-shadow:0 4px 16px rgba(56,182,255,0.4)">
             <span class="font-anton text-[#0a0f1a] text-xl leading-none">3</span>
@@ -593,7 +593,7 @@
 
       <div class="step-card group">
         <div class="relative overflow-hidden" style="height:200px;">
-          <img src="/Images/Detail.jpg" alt="Step 4 Detail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="object-position: 50% 20%;">
+          <img src="/Images/Detail.jpg" alt="Step 4 Detail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="object-position: 50% 20%;" loading="lazy">
           <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.7) 0%,transparent 60%)"></div>
           <div class="absolute top-4 left-4 w-10 h-10 bg-[#38b6ff] rounded-full flex items-center justify-center" style="box-shadow:0 4px 16px rgba(56,182,255,0.4)">
             <span class="font-anton text-[#0a0f1a] text-xl leading-none">4</span>

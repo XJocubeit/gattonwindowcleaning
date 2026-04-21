@@ -44,7 +44,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
       <a href="/screen-cleaning.html" class="svc-card rounded-2xl" style="height:260px;">
-        <img src="/Images/ScreenCleaning2.png" alt="Screen Cleaning ${loc} ${post}" class="w-full h-full object-cover" style="object-position:50% 50%;">
+        <img src="/Images/ScreenCleaning2.jpg" alt="Screen Cleaning ${loc} ${post}" class="w-full h-full object-cover" style="object-position:50% 50%;">
         <div class="label"><div class="flex items-end justify-between"><div>
           <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-widest mb-1">Add-On Service</p>
           <h3 class="font-anton text-white text-xl">SCREEN CLEANING</h3>

@@ -27,7 +27,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Poppins',sans-serif;background:#0a0f1a;color:#f4f9ff}
@@ -95,14 +95,14 @@
       <!-- Hero Photo -->
       <div class="hidden lg:block relative self-end" style="height:520px">
         <div class="absolute inset-0 rounded-t-3xl overflow-hidden" style="border:1px solid rgba(56,182,255,0.15);border-bottom:none">
-          <img src="/Images/InteriorWindowCleaning.jpg" alt="Xavier cleaning residential windows" class="w-full h-full object-cover" style="object-position:60% 20%">
+          <img src="/Images/InteriorWindowCleaning.jpg" alt="Xavier cleaning residential windows" class="w-full h-full object-cover" style="object-position:60% 20%" loading="lazy">
           <div class="absolute inset-0" style="background:linear-gradient(to bottom,transparent 50%,rgba(10,15,26,0.8) 100%)"></div>
           <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(10,15,26,0.3) 0%,transparent 40%)"></div>
         </div>
         <!-- Floating stat -->
         <div class="absolute bottom-6 left-6 right-6">
           <div class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl" style="background:rgba(10,15,26,0.85);backdrop-filter:blur(12px);border:1px solid rgba(56,182,255,0.20)">
-            <img src="/Brand%20Assets/8.png" alt="" class="h-6 w-auto">
+            <img src="/Brand%20Assets/8.png" alt="" class="h-6 w-auto" loading="lazy">
             <span class="text-white text-sm font-bold">Gatton &amp; Lockyer Valley</span>
           </div>
         </div>
@@ -120,12 +120,12 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <!-- Image -->
       <div class="relative rounded-3xl overflow-hidden" style="aspect-ratio:4/3">
-        <img src="/Images/DSC04501.jpg" alt="Xavier cleaning residential windows with mop" class="w-full h-full object-cover" style="object-position:55% 30%">
+        <img src="/Images/DSC04501.jpg" alt="Xavier cleaning residential windows with mop" class="w-full h-full object-cover" style="object-position:55% 30%" loading="lazy">
         <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.5) 0%,transparent 60%)"></div>
         <!-- Badge -->
         <div class="absolute bottom-6 left-6 right-6">
           <div class="inline-flex items-center gap-3 px-5 py-3 rounded-2xl" style="background:rgba(10,15,26,0.85);backdrop-filter:blur(12px);border:1px solid rgba(56,182,255,0.20)">
-            <img src="/Brand%20Assets/8.png" alt="" class="h-6 w-auto">
+            <img src="/Brand%20Assets/8.png" alt="" class="h-6 w-auto" loading="lazy">
             <span class="text-white text-sm font-bold">Gatton &amp; Lockyer Valley</span>
           </div>
         </div>
@@ -173,31 +173,31 @@
 
       <!-- Large left (spans 2 rows) -->
       <div class="photo-grid-item row-span-2" style="grid-row:span 2">
-        <img src="/Images/DSC04025.jpg" alt="Gatton window cleaning branded shirt" style="object-position:50% 20%">
+        <img src="/Images/DSC04025.jpg" alt="Gatton window cleaning branded shirt" style="object-position:50% 20%" loading="lazy">
         <div class="overlay"></div>
       </div>
 
       <!-- Top middle -->
       <div class="photo-grid-item">
-        <img src="/Images/DSC04477.jpg" alt="Exterior window cleaning with squeegee" style="object-position:50% 20%">
+        <img src="/Images/DSC04477.jpg" alt="Exterior window cleaning with squeegee" style="object-position:50% 20%" loading="lazy">
         <div class="overlay"></div>
       </div>
 
       <!-- Top right -->
       <div class="photo-grid-item">
-        <img src="/Images/DSC04674.jpg" alt="Professional squeegee technique close up" style="object-position:50% 30%">
+        <img src="/Images/DSC04674.jpg" alt="Professional squeegee technique close up" style="object-position:50% 30%" loading="lazy">
         <div class="overlay"></div>
       </div>
 
       <!-- Bottom middle -->
       <div class="photo-grid-item">
-        <img src="/Images/DSC04559.jpg" alt="Residential window cleaning side angle" style="object-position:50% 30%">
+        <img src="/Images/DSC04559.jpg" alt="Residential window cleaning side angle" style="object-position:50% 30%" loading="lazy">
         <div class="overlay"></div>
       </div>
 
       <!-- Bottom right -->
       <div class="photo-grid-item">
-        <img src="/Images/DSC04158.jpg" alt="Xavier at residential property ready to clean" style="object-position:50% 15%">
+        <img src="/Images/DSC04158.jpg" alt="Xavier at residential property ready to clean" style="object-position:50% 15%" loading="lazy">
         <div class="overlay"></div>
       </div>
 
@@ -309,7 +309,7 @@
         <ul class="space-y-5">
           <li class="flex items-start gap-4">
             <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(56,182,255,0.12)">
-              <img src="/Brand%20Assets/TickBlack.png" alt="" class="w-5 h-5" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(185deg)">
+              <img src="/Brand%20Assets/TickBlack.png" alt="" class="w-5 h-5" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(185deg)" loading="lazy">
             </div>
             <div>
               <div class="text-white font-semibold text-sm mb-1">Interior Pane Cleaning</div>
@@ -318,7 +318,7 @@
           </li>
           <li class="flex items-start gap-4">
             <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(56,182,255,0.12)">
-              <img src="/Brand%20Assets/TickBlack.png" alt="" class="w-5 h-5" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(185deg)">
+              <img src="/Brand%20Assets/TickBlack.png" alt="" class="w-5 h-5" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(185deg)" loading="lazy">
             </div>
             <div>
               <div class="text-white font-semibold text-sm mb-1">Exterior Pane Cleaning</div>
@@ -327,7 +327,7 @@
           </li>
           <li class="flex items-start gap-4">
             <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(56,182,255,0.12)">
-              <img src="/Brand%20Assets/TickBlack.png" alt="" class="w-5 h-5" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(185deg)">
+              <img src="/Brand%20Assets/TickBlack.png" alt="" class="w-5 h-5" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(185deg)" loading="lazy">
             </div>
             <div>
               <div class="text-white font-semibold text-sm mb-1">Professional Squeegee Finish</div>
@@ -336,7 +336,7 @@
           </li>
           <li class="flex items-start gap-4">
             <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5" style="background:rgba(56,182,255,0.12)">
-              <img src="/Brand%20Assets/TickBlack.png" alt="" class="w-5 h-5" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(185deg)">
+              <img src="/Brand%20Assets/TickBlack.png" alt="" class="w-5 h-5" style="filter:invert(1) sepia(1) saturate(5) hue-rotate(185deg)" loading="lazy">
             </div>
             <div>
               <div class="text-white font-semibold text-sm mb-1">Final Walkthrough Inspection</div>
@@ -347,7 +347,7 @@
       </div>
       <!-- Side image -->
       <div class="relative rounded-3xl overflow-hidden" style="aspect-ratio:4/3">
-        <img src="/Images/DSC04674.jpg" alt="Professional squeegee technique close up" class="w-full h-full object-cover" style="object-position:50% 30%">
+        <img src="/Images/DSC04674.jpg" alt="Professional squeegee technique close up" class="w-full h-full object-cover" style="object-position:50% 30%" loading="lazy">
         <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.45) 0%,transparent 50%)"></div>
         <!-- Floating label -->
         <div class="absolute bottom-6 left-6">
@@ -367,7 +367,7 @@
       <!-- Xavier photo -->
       <div class="lg:col-span-2 flex items-center gap-6">
         <div class="rounded-2xl overflow-hidden shrink-0" style="width:90px;height:110px;border:2px solid rgba(56,182,255,0.25)">
-          <img src="/Images/DSC04158.jpg" alt="Xavier - owner of Gatton Window Cleaning" class="w-full h-full object-cover" style="object-position:50% 15%">
+          <img src="/Images/DSC04158.jpg" alt="Xavier - owner of Gatton Window Cleaning" class="w-full h-full object-cover" style="object-position:50% 15%" loading="lazy">
         </div>
         <div>
           <div class="text-white font-bold text-base mb-1">Xavier Jocubeit</div>

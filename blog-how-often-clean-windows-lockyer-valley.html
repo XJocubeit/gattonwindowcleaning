@@ -116,7 +116,7 @@
   }
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap"></noscript>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Poppins', sans-serif; background: #f4f9ff; color: #0a0f1a; }
@@ -174,7 +174,7 @@
 
     <!-- Hero image -->
     <div class="relative rounded-2xl overflow-hidden mb-8" style="height:360px;">
-      <img src="/Images/DSC04608.jpg" alt="Professional window cleaning in Lockyer Valley, Queensland" class="w-full h-full object-cover">
+      <img src="/Images/DSC04608.jpg" alt="Professional window cleaning in Lockyer Valley, Queensland" class="w-full h-full object-cover" loading="lazy">
       <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,15,26,0.5) 0%,transparent 60%)"></div>
     </div>
 
@@ -331,7 +331,7 @@
 
     <!-- Author Box -->
     <div class="mt-10 bg-white rounded-2xl p-6 flex items-start gap-4 border border-[#e5e7eb]">
-      <img src="/Images/Xavier.jpg" alt="Xavier, Gatton Window Cleaning" class="w-16 h-16 rounded-full object-cover flex-shrink-0" style="object-position:top center;">
+      <img src="/Images/Xavier.jpg" alt="Xavier, Gatton Window Cleaning" class="w-16 h-16 rounded-full object-cover flex-shrink-0" style="object-position:top center;" loading="lazy">
       <div>
         <p class="font-bold text-[#0a0f1a]">Xavier</p>
         <p class="text-[#38b6ff] text-xs font-semibold uppercase tracking-wider mb-2">Owner, Gatton Window Cleaning</p>
@@ -355,14 +355,14 @@
       <h3 class="font-anton text-2xl text-[#0a0f1a] mb-6">RELATED ARTICLES</h3>
       <div class="grid gap-6 md:grid-cols-2">
         <a href="/blog-window-cleaning-cost-gatton-qld" class="bg-white rounded-xl overflow-hidden border border-[#e5e7eb] hover:shadow-lg transition-shadow group">
-          <img src="/Images/XavierCleaning.jpg" alt="Window cleaning cost Gatton" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="/Images/XavierCleaning.jpg" alt="Window cleaning cost Gatton" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
           <div class="p-4">
             <span class="tag mb-2 block w-max">Pricing</span>
             <p class="font-semibold text-sm text-[#0a0f1a]">Window Cleaning Cost in Gatton, QLD, What to Expect in 2026</p>
           </div>
         </a>
         <a href="/blog-dirty-window-tracks-guide" class="bg-white rounded-xl overflow-hidden border border-[#e5e7eb] hover:shadow-lg transition-shadow group">
-          <img src="/Images/Seals and Tracks.jpg" alt="Dirty window tracks guide" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="/Images/Seals and Tracks.jpg" alt="Dirty window tracks guide" class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
           <div class="p-4">
             <span class="tag mb-2 block w-max">Maintenance</span>
             <p class="font-semibold text-sm text-[#0a0f1a]">Dirty Window Tracks? Here's Why It Matters More Than You Think</p>
