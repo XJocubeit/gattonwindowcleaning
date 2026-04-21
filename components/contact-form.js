@@ -26,13 +26,13 @@
           </div>
         </a>
 
-        <a href="mailto:hello@gattonwindowcleaning.com.au" style="display:flex;align-items:center;gap:1rem;text-decoration:none;">
+        <a href="mailto:hello@gattonwindowcleaning.com" style="display:flex;align-items:center;gap:1rem;text-decoration:none;">
           <div style="width:3rem;height:3rem;border-radius:50%;background:#fff;border:1px solid #e8f5ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 16px rgba(56,182,255,0.08);">
             <svg style="width:1.25rem;height:1.25rem;color:#38b6ff;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </div>
           <div>
             <p style="font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:rgba(55,65,81,0.5);margin:0 0 2px;font-family:'Poppins',sans-serif;">Email</p>
-            <p style="font-weight:700;color:#0a0f1a;font-size:0.9rem;margin:0;font-family:'Poppins',sans-serif;">hello@gattonwindowcleaning.com.au</p>
+            <p style="font-weight:700;color:#0a0f1a;font-size:0.9rem;margin:0;font-family:'Poppins',sans-serif;">hello@gattonwindowcleaning.com</p>
           </div>
         </a>
 

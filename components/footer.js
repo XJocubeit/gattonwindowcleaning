@@ -14,7 +14,7 @@
       <p style="font-size:0.875rem;line-height:1.75;max-width:24rem;">Professional window cleaning across the Lockyer Valley. Residential, commercial, screens, tracks &amp; frames, done properly.</p>
       <div style="display:flex;gap:1rem;margin-top:1.25rem;flex-wrap:wrap;">
         <a href="tel:0493742542" style="font-size:0.875rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">0493 742 542</a>
-        <a href="mailto:hello@gattonwindowcleaning.com.au" style="font-size:0.875rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">hello@gattonwindowcleaning.com.au</a>
+        <a href="mailto:hello@gattonwindowcleaning.com" style="font-size:0.875rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#38b6ff'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">hello@gattonwindowcleaning.com</a>
       </div>
     </div>
     <div>

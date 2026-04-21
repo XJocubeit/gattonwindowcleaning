@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gattonwindowcleaning.com.au/sitemap.xml
+Sitemap: https://gattonwindowcleaning.com/sitemap.xml
