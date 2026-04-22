@@ -74,7 +74,8 @@
       "Bash(xargs -0 sed -i '' 's|https://gattonwindowcleaning\\\\.com/|https://www.gattonwindowcleaning.com/|g')",
       "Bash(sed -i '' 's|<link rel=\"canonical\" href=\"/screen-cleaning\">|<link rel=\"canonical\" href=\"https://www.gattonwindowcleaning.com/screen-cleaning\">|' /Users/xavierjocubeit/VScode/screen-cleaning.html)",
       "Bash(sed -i '' 's|<meta name=\"robots\" content=\"noindex, follow\">|<meta name=\"robots\" content=\"index, follow\">|' /Users/xavierjocubeit/VScode/terms.html /Users/xavierjocubeit/VScode/privacy.html)",
-      "Bash(xargs -0 sed -i '' 's|<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=optional\" onload=\"this.rel='\\\\''stylesheet'\\\\''\"><noscript><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=optional\"></noscript>|<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Anton\\\\&family=Poppins:wght@400;500;600;700\\\\&display=swap\">|g')"
+      "Bash(xargs -0 sed -i '' 's|<link rel=\"preload\" as=\"style\" href=\"https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=optional\" onload=\"this.rel='\\\\''stylesheet'\\\\''\"><noscript><link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=optional\"></noscript>|<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Anton\\\\&family=Poppins:wght@400;500;600;700\\\\&display=swap\">|g')",
+      "Bash(xargs -0 sed -i '' 's|</head>|<script src=\"https://api.datadriven.so/js/external-tracking.js\" data-tracking-id=\"tk_f89d328093aa4c048988780cfd37c157\"></script>\\\\n</head>|g')"
     ]
   }
 }
