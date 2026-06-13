@@ -163,23 +163,33 @@
     btn.disabled = true;
     btn.style.opacity = '0.7';
 
+    const firstName = form.querySelector('[name="first_name"]').value.trim();
+    const lastName  = form.querySelector('[name="last_name"]').value.trim();
+    const service   = form.querySelector('[name="service"]').value;
+    const message   = form.querySelector('[name="message"]').value.trim();
+
+    // Map the embedded enquiry form to the CRM schema. The CRM only requires `name`;
+    // everything else is best-effort. Service choice + message go into `notes`.
+    const fullName = `${firstName} ${lastName}`.trim() || firstName || lastName || 'Unknown';
+    const notes = [service ? `Service: ${service}` : '', message].filter(Boolean).join(' — ');
+    const isCommercial = /commercial/i.test(service);
     const payload = {
-      source:    'contact-form-component',
-      firstName: form.querySelector('[name="first_name"]').value.trim(),
-      lastName:  form.querySelector('[name="last_name"]').value.trim(),
-      phone:     form.querySelector('[name="phone"]').value.trim(),
-      email:     form.querySelector('[name="email"]').value.trim(),
-      service:   form.querySelector('[name="service"]').value,
-      message:   form.querySelector('[name="message"]').value.trim(),
+      name:  fullName,
+      phone: form.querySelector('[name="phone"]').value.trim(),
+      email: form.querySelector('[name="email"]').value.trim(),
+      notes,
+      type:  isCommercial ? 'COMMERCIAL' : 'RESIDENTIAL',
     };
 
     try {
-      await fetch('https://services.leadconnectorhq.com/hooks/KZviLEojY7TgiPp41oQG/webhook-trigger/QcPbAo05897VJCmko5Nz', {
+      await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-    } catch (_) {}
+    } catch (err) {
+      console.error('Lead submission failed', err);
+    }
 
     form.reset();
     btn.textContent = 'Send Message →';

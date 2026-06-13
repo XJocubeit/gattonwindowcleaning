@@ -694,36 +694,36 @@
   const TOTAL_STEPS = 7;
   let currentStep = 1;
 
-  // Pricing tables (indexed by pane tier 0–4: 1-15, 16-25, 26-35, 36-50, 50+)
-  const PRICING = {
-    base:      [149, 199, 259, 349, 419],
-    interior:  [80,  100, 130, 160, 195],
-    storey2:   [30,  50,  70,  95,  120],
-    storey3:   [60,  90,  120, 165, 210],
-    tracks:    [20,  30,  40,  55,  70],
-    flyscreen: [48,  72,  112, 154, 240],
+  // Pricing now lives in the CRM. The browser only collects answers and POSTs them
+  // to /api/lead (a Vercel serverless function that holds the x-gwc-secret header
+  // server-side). The CRM responds with { ok, jobId, estimate } and we display
+  // `estimate` to the user.
+  const LEAD_API_URL = '/api/lead';
+
+  // Range-to-integer maps so the CRM has a number to price. The UI still presents
+  // ranges; these are only used to build the outgoing payload.
+  const RES_PANE_MIDPOINTS  = { '1–15': 8, '16–25': 20, '26–35': 30, '36–50': 42, '50+': 55 };
+  const COMM_PANE_MIDPOINTS = [17, 42, 90, 150]; // 10-25, 25-60, 60-120, 120+
+  const STOREY_MAP    = { 'single': 'ONE', 'double': 'TWO', '3+': 'THREE_PLUS' };
+  const FREQUENCY_MAP = {
+    'one-off':     'ONE_OFF',
+    'bi-monthly':  'BI_MONTHLY',
+    'monthly':     'MONTHLY',
+    'fortnightly': 'FORTNIGHTLY',
+    'weekly':      'WEEKLY',
   };
 
-  const COMM_PRICING = {
-    'one-off':     { ext: 10, both: 16 },
-    'bi-monthly':  { ext: 9,  both: 14 },
-    'monthly':     { ext: 7,  both: 12 },
-    'fortnightly': { ext: 6,  both: 10 },
-    'weekly':      { ext: 5,  both: 8  },
-  };
-  const COMM_PANE_MIDPOINTS = [17, 42, 90, 150]; // midpoints for 10-25, 25-60, 60-120, 120+
+  // Set once the CRM has accepted the lead so a Back-then-Next doesn't post twice.
+  let leadSubmitted = false;
+  let cachedEstimate = null;
 
   // State
   const state = {
     propertyType: null,
     panes: null,
     paneTier: -1,
-    panesMin: 0,
-    panesMax: 0,
     storeys: null,
-    storeysAdd: 0,
     addons: [],
-    addonTotal: 0,
     frequency: null,
     scope: null,
     customPaneCount: 0,
@@ -748,9 +748,9 @@
     document.getElementById('step-pct').textContent = pct + '%';
     document.getElementById('progress-bar').style.width = pct + '%';
 
-    // Back button
+    // Back button — hidden on step 7 because the lead has already been sent to the CRM.
     const back = document.getElementById('btn-back');
-    back.style.display = n > 1 ? 'flex' : 'none';
+    back.style.display = (n > 1 && n !== 7) ? 'flex' : 'none';
 
     // Next button
     const next = document.getElementById('btn-next');
@@ -770,7 +770,6 @@
     // Hide nav on step 7
     navButtons.style.display = n === 7 ? 'none' : 'flex';
 
-    updateEstimate();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -785,9 +784,6 @@
       if (step === '2') {
         state.panes = card.dataset.value;
         state.paneTier = parseInt(card.dataset.tier);
-        state.panesMin = PRICING.base[state.paneTier];
-        state.panesMax = PRICING.base[state.paneTier];
-        updateAddonPrices(state.paneTier);
       }
       if (step === 'c2') {
         state.panes = card.dataset.value;
@@ -801,14 +797,9 @@
           customRow.style.display = 'none';
         }
       }
-      if (step === '3') {
-        state.storeys = card.dataset.value;
-        state.storeysAdd = parseInt(card.dataset.priceAdd) || 0;
-      }
+      if (step === '3') state.storeys = card.dataset.value;
       if (step === 'c3') state.frequency = card.dataset.value;
       if (step === 'c4') state.scope = card.dataset.value;
-
-      updateEstimate();
 
       // Auto-advance for steps 1, 2, 3, c3, c4, and c2 (not custom)
       if (['1','2','3','c3','c4'].includes(step) || (step === 'c2' && card.dataset.value !== 'custom')) {
@@ -820,55 +811,16 @@
     });
   });
 
-  // Add-ons checkboxes
+  // Add-ons checkboxes — we only track which labels are selected; the CRM prices them.
   document.querySelectorAll('.addon-check').forEach(cb => {
-    cb.addEventListener('change', () => {
-      recalcAddons();
-      updateEstimate();
-    });
+    cb.addEventListener('change', recalcAddons);
   });
 
-  function updateAddonPrices(tier) {
-    // Update storey cards
-    const d2 = document.getElementById('storey-double-card');
-    const d3 = document.getElementById('storey-3plus-card');
-    d2.dataset.priceAdd = PRICING.storey2[tier];
-    d3.dataset.priceAdd = PRICING.storey3[tier];
-    document.getElementById('storey-double-price').textContent = '+$' + PRICING.storey2[tier];
-    document.getElementById('storey-3plus-price').textContent = '+$' + PRICING.storey3[tier];
-    // Update storeysAdd if storey already selected
-    if (state.storeys === 'double') state.storeysAdd = PRICING.storey2[tier];
-    if (state.storeys === '3+') state.storeysAdd = PRICING.storey3[tier];
-
-    // Update addon checkboxes
-    const intCheck = document.querySelector('.addon-check[data-label="Inside glass"]');
-    intCheck.dataset.price = PRICING.interior[tier];
-    document.getElementById('interior-price-lbl').textContent = '+$' + PRICING.interior[tier];
-
-    const tracksCheck = document.querySelector('.addon-check[data-label="Tracks, frames & sills"]');
-    tracksCheck.dataset.price = PRICING.tracks[tier];
-    document.getElementById('tracks-price-lbl').textContent = '+$' + PRICING.tracks[tier];
-
-    const flyCheck = document.querySelector('.addon-check[data-label="Flyscreen cleaning"]');
-    flyCheck.dataset.price = PRICING.flyscreen[tier];
-    document.getElementById('fly-price-lbl').textContent = '~$' + PRICING.flyscreen[tier];
-
-    recalcAddons();
-  }
-
   function recalcAddons() {
-    state.addonTotal = 0;
     state.addons = [];
     document.querySelectorAll('.addon-check').forEach(cb => {
-      if (cb.checked) {
-        state.addonTotal += parseInt(cb.dataset.price) || 0;
-        state.addons.push(cb.dataset.label);
-      }
+      if (cb.checked) state.addons.push(cb.dataset.label);
     });
-  }
-
-  function updateEstimate() {
-    // Price is hidden until step 6, state is kept current by recalcAddons() etc.
   }
 
   // Next button
@@ -937,8 +889,6 @@
       if (stepToClear === 2) {
         state.panes = null;
         state.paneTier = -1;
-        state.panesMin = 0;
-        state.panesMax = 0;
         state.customPaneCount = 0;
         if (state.propertyType === 'commercial') {
           document.querySelectorAll('.opt-card[data-step="c2"]').forEach(c => c.classList.remove('selected'));
@@ -954,7 +904,6 @@
           document.querySelectorAll('.opt-card[data-step="c3"]').forEach(c => c.classList.remove('selected'));
         } else {
           state.storeys = null;
-          state.storeysAdd = 0;
           document.querySelectorAll('.opt-card[data-step="3"]').forEach(c => c.classList.remove('selected'));
         }
       }
@@ -1020,71 +969,93 @@
     return ok;
   }
 
-  function triggerPriceReveal() {
-    const priceEl   = document.getElementById('reveal-price');
-    const noteEl    = document.getElementById('reveal-note');
-    const labelEl   = document.getElementById('reveal-price-label');
-    const breakdownEl = document.getElementById('reveal-breakdown');
-    const disclaimerEl = document.getElementById('reveal-disclaimer-text');
-    const submitLbl = document.getElementById('submit-btn-label');
+  function buildCrmPayload() {
+    const isComm = state.propertyType === 'commercial';
+    const name = `${state.fname} ${state.lname}`.trim();
 
-    let total, noteText, labelText, disclaimerText, submitText, breakdownHtml, sbHtml;
+    const common = {
+      name: name || state.fname || state.lname || 'Unknown',
+      phone: state.phone || '',
+      email: state.email || '',
+      bestTimeToCall: state.preferredTime || '',
+      type: isComm ? 'COMMERCIAL' : 'RESIDENTIAL',
+    };
 
-    if (state.propertyType === 'commercial') {
-      const rate = COMM_PRICING[state.frequency];
-      const pricePerPane = rate[state.scope === 'both' ? 'both' : 'ext'];
-      const panes = state.customPaneCount > 0 ? state.customPaneCount : (COMM_PANE_MIDPOINTS[state.paneTier] || 17);
-      total = panes * pricePerPane;
-      labelText = 'Ballpark Estimate';
-      noteText = 'Per visit, excl. GST, based on approx. pane count';
-      disclaimerText = 'This is a ballpark based on your approximate pane count. Xavier will discuss exact pricing and set up a scheduled service plan on the call.';
-      submitText = 'Book My Free Call';
-      const freqLabels = { 'one-off': 'One-off', 'bi-monthly': 'Every 2 months', 'monthly': 'Monthly', 'fortnightly': 'Fortnightly', 'weekly': 'Weekly' };
-      const scopeLabel = state.scope === 'both' ? 'Both sides' : 'Exterior only';
-      breakdownHtml = `
-        <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">${state.customPaneCount > 0 ? 'Exact pane count' : 'Approx. pane count'}</span><span class="text-[#0a0f1a] font-bold text-sm">${state.customPaneCount > 0 ? '' : '~'}${panes} panes</span></div>
-        <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Scope</span><span class="text-[#0a0f1a] font-bold text-sm">${scopeLabel}</span></div>
-        <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Frequency</span><span class="text-[#0a0f1a] font-bold text-sm">${freqLabels[state.frequency]}</span></div>
-        <div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Rate per pane</span><span class="text-[#0a0f1a] font-bold text-sm">$${pricePerPane}/pane</span></div>
-        <div class="flex justify-between pt-3 items-center"><span class="font-bold text-[#0a0f1a] text-sm">Ballpark per visit</span><span class="font-display text-2xl text-[#38b6ff]">~$${total}</span></div>
-      `;
-      sbHtml = `
-        <div class="flex justify-between text-white/50 text-xs"><span>${freqLabels[state.frequency]} · ${scopeLabel}</span><span>~$${total}/visit</span></div>
-        <div class="flex justify-between text-white/50 text-xs"><span>~${panes} panes × $${pricePerPane}</span></div>
-      `;
-    } else {
-      total = state.panesMin + state.storeysAdd + state.addonTotal;
-      labelText = 'Your Estimate';
-      noteText = state.panes === '50+' ? 'Estimate, may vary for large properties' : 'Estimated price (excl. GST)';
-      disclaimerText = 'This is an estimate only. Xavier will call you to confirm the final price after reviewing your details. No payment is taken online.';
-      submitText = 'Send My Quote Request';
-      breakdownHtml = `<div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Window cleaning (${state.panes} panes)</span><span class="text-[#0a0f1a] font-bold text-sm">$${state.panesMin}</span></div>`;
-      if (state.storeysAdd) breakdownHtml += `<div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">Storey access (${state.storeys})</span><span class="text-[#0a0f1a] font-bold text-sm">+$${state.storeysAdd}</span></div>`;
-      document.querySelectorAll('.addon-check').forEach(cb => {
-        if (cb.checked && parseInt(cb.dataset.price) > 0)
-          breakdownHtml += `<div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">${cb.dataset.label}</span><span class="text-[#0a0f1a] font-bold text-sm">+$${cb.dataset.price}</span></div>`;
-      });
-      breakdownHtml += `<div class="flex justify-between pt-3 items-center"><span class="font-bold text-[#0a0f1a] text-sm">Total Estimate</span><span class="font-display text-2xl text-[#38b6ff]">$${total}</span></div>`;
-      sbHtml = `<div class="flex justify-between text-white/50 text-xs"><span>Window cleaning (${state.panes} panes)</span><span>$${state.panesMin}</span></div>`;
-      if (state.storeysAdd) sbHtml += `<div class="flex justify-between text-white/50 text-xs"><span>Storey access (${state.storeys})</span><span>+$${state.storeysAdd}</span></div>`;
-      document.querySelectorAll('.addon-check').forEach(cb => {
-        if (cb.checked && parseInt(cb.dataset.price) > 0)
-          sbHtml += `<div class="flex justify-between text-white/50 text-xs"><span>${cb.dataset.label}</span><span>+$${cb.dataset.price}</span></div>`;
+    if (isComm) {
+      const panes = state.customPaneCount > 0
+        ? state.customPaneCount
+        : (COMM_PANE_MIDPOINTS[state.paneTier] || 17);
+      return Object.assign({}, common, {
+        address: state.businessAddress || '',
+        suburb: state.suburb || '',
+        notes: state.notes || '',
+        businessName: state.businessName || '',
+        frequency: FREQUENCY_MAP[state.frequency] || 'ONE_OFF',
+        scope: state.scope === 'both' ? 'BOTH' : 'EXTERIOR',
+        panes,
       });
     }
 
-    // Update UI text
-    labelEl.textContent = labelText;
-    noteEl.textContent = noteText;
-    disclaimerEl.textContent = disclaimerText;
-    submitLbl.textContent = submitText;
-    breakdownEl.innerHTML = breakdownHtml;
+    const panes = RES_PANE_MIDPOINTS[state.panes] || 0;
+    const insideAndOut = state.addons.includes('Inside glass');
+    const extraNotes = [];
+    if (state.addons.includes('Flyscreen cleaning'))     extraNotes.push('Flyscreen cleaning requested');
+    if (state.addons.includes('Tracks, frames & sills')) extraNotes.push('Tracks, frames & sills detail requested');
+    const notes = [state.notes, ...extraNotes].filter(Boolean).join(' — ');
 
-    // Animate price in with count-up
+    return Object.assign({}, common, {
+      address: '',
+      suburb: state.suburb || '',
+      notes,
+      panes,
+      bigGlass: 0,
+      insideAndOut,
+      storeys: STOREY_MAP[state.storeys] || 'ONE',
+      screensStd: 0,
+      screensSecurity: 0,
+      solarPanels: 0,
+      gutterMetres: 0,
+    });
+  }
+
+  function buildSelectionRows() {
+    const rows = [];
+    if (state.propertyType === 'commercial') {
+      const freqLabels = { 'one-off': 'One-off', 'bi-monthly': 'Every 2 months', 'monthly': 'Monthly', 'fortnightly': 'Fortnightly', 'weekly': 'Weekly' };
+      const paneText = state.customPaneCount > 0 ? `${state.customPaneCount} panes` : `~${state.panes} panes`;
+      if (state.businessName) rows.push(['Business', state.businessName]);
+      rows.push(['Window count', paneText]);
+      rows.push(['Scope', state.scope === 'both' ? 'Inside & out' : 'Exterior only']);
+      rows.push(['Frequency', freqLabels[state.frequency] || '—']);
+    } else {
+      const storeyText = { 'single': 'Single storey', 'double': 'Double storey', '3+': '3+ storeys' };
+      rows.push(['Window count', `${state.panes} panes`]);
+      rows.push(['Levels', storeyText[state.storeys] || '—']);
+      rows.push(['Scope', state.addons.includes('Inside glass') ? 'Inside & out' : 'Exterior only']);
+      const extras = state.addons.filter(a => a !== 'Outside glass' && a !== 'Inside glass');
+      if (extras.length) rows.push(['Extras', extras.join(', ')]);
+      if (state.suburb) rows.push(['Suburb', state.suburb]);
+    }
+    return rows;
+  }
+
+  function renderBreakdown(rows) {
+    return rows.map(([k, v]) =>
+      `<div class="flex justify-between py-2 border-b border-gray-100"><span class="text-gray-400 text-sm">${k}</span><span class="text-[#0a0f1a] font-bold text-sm">${v}</span></div>`
+    ).join('');
+  }
+
+  function renderSidebarBreakdown(rows) {
+    return rows.map(([k, v]) =>
+      `<div class="flex justify-between text-white/50 text-xs"><span>${k}</span><span>${v}</span></div>`
+    ).join('');
+  }
+
+  function animateEstimateCountUp(total) {
+    const priceEl = document.getElementById('reveal-price');
     priceEl.style.transition = 'none';
     priceEl.style.opacity = '0';
     priceEl.style.transform = 'scale(0.85)';
-    const prefix = state.propertyType === 'commercial' ? '~$' : '$';
     setTimeout(() => {
       priceEl.style.transition = 'opacity 0.5s cubic-bezier(0.34,1.56,0.64,1), transform 0.5s cubic-bezier(0.34,1.56,0.64,1)';
       priceEl.style.opacity = '1';
@@ -1095,15 +1066,126 @@
         const elapsed = Date.now() - startTime;
         const progress = Math.min(elapsed / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        priceEl.textContent = prefix + Math.round(eased * total);
+        priceEl.textContent = '$' + Math.round(eased * total);
         if (progress < 1) requestAnimationFrame(tick);
       })();
     }, 150);
+  }
 
-    // Update sidebar
-    document.getElementById('est-display').textContent = prefix + total;
-    document.getElementById('est-note').textContent = state.propertyType === 'commercial' ? 'Ballpark per visit (excl. GST)' : noteText;
-    document.getElementById('est-breakdown').innerHTML = sbHtml;
+  function showLeadAcceptedNoEstimate(message) {
+    const priceEl      = document.getElementById('reveal-price');
+    const noteEl       = document.getElementById('reveal-note');
+    const labelEl      = document.getElementById('reveal-price-label');
+    const breakdownEl  = document.getElementById('reveal-breakdown');
+    const disclaimerEl = document.getElementById('reveal-disclaimer-text');
+    const submitLbl    = document.getElementById('submit-btn-label');
+
+    priceEl.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    priceEl.style.opacity = '1';
+    priceEl.style.transform = 'scale(1)';
+    priceEl.textContent = '✓';
+    labelEl.textContent = 'Quote Received';
+    noteEl.textContent = '';
+    disclaimerEl.textContent = message || 'Xavier\'s got your request and will call you personally to confirm your price. Keep an eye on your phone.';
+    breakdownEl.innerHTML = renderBreakdown(buildSelectionRows());
+    submitLbl.textContent = 'Back to Homepage';
+
+    document.getElementById('est-display').textContent = 'Sent';
+    document.getElementById('est-note').textContent = 'Xavier will call to confirm';
+    document.getElementById('est-breakdown').innerHTML = renderSidebarBreakdown(buildSelectionRows());
+  }
+
+  async function triggerPriceReveal() {
+    const priceEl      = document.getElementById('reveal-price');
+    const noteEl       = document.getElementById('reveal-note');
+    const labelEl      = document.getElementById('reveal-price-label');
+    const breakdownEl  = document.getElementById('reveal-breakdown');
+    const disclaimerEl = document.getElementById('reveal-disclaimer-text');
+    const submitLbl    = document.getElementById('submit-btn-label');
+
+    // If the lead was already accepted in this session (user clicked Next → back → Next),
+    // just re-display the cached result without hitting the CRM a second time.
+    if (leadSubmitted) {
+      if (cachedEstimate != null) {
+        labelEl.textContent = state.propertyType === 'commercial' ? 'Ballpark Estimate' : 'Your Estimate';
+        noteEl.textContent  = state.propertyType === 'commercial' ? 'Per visit, excl. GST' : 'Estimated price (excl. GST)';
+        disclaimerEl.textContent = 'This is an estimate from our pricing system. Xavier will call to confirm the final price after reviewing your details. No payment is taken online.';
+        breakdownEl.innerHTML = renderBreakdown(buildSelectionRows());
+        submitLbl.textContent = 'Back to Homepage';
+        animateEstimateCountUp(cachedEstimate);
+        document.getElementById('est-display').textContent = '$' + cachedEstimate;
+        document.getElementById('est-note').textContent = state.propertyType === 'commercial' ? 'Ballpark per visit (excl. GST)' : 'Estimated price (excl. GST)';
+        document.getElementById('est-breakdown').innerHTML = renderSidebarBreakdown(buildSelectionRows());
+      } else {
+        showLeadAcceptedNoEstimate();
+      }
+      return;
+    }
+
+    // Loading state — show selection summary immediately so the screen isn't blank.
+    priceEl.style.transition = 'none';
+    priceEl.style.opacity = '1';
+    priceEl.style.transform = 'scale(1)';
+    priceEl.textContent = '…';
+    labelEl.textContent = 'Sending your quote';
+    noteEl.textContent = 'Calculating your estimate…';
+    disclaimerEl.textContent = 'Hang tight — Xavier\'s pricing engine is crunching the numbers.';
+    breakdownEl.innerHTML = renderBreakdown(buildSelectionRows());
+    submitLbl.textContent = 'Sending…';
+    document.getElementById('est-display').textContent = '…';
+    document.getElementById('est-note').textContent = 'Calculating…';
+    document.getElementById('est-breakdown').innerHTML = renderSidebarBreakdown(buildSelectionRows());
+
+    let payload;
+    try { payload = buildCrmPayload(); }
+    catch (err) {
+      console.error('Failed to build CRM payload', err);
+      leadSubmitted = true;
+      showLeadAcceptedNoEstimate('We saved your details — Xavier will be in touch.');
+      return;
+    }
+
+    let data = null;
+    let networkOk = true;
+    try {
+      const res = await fetch(LEAD_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      try { data = await res.json(); } catch (_) { data = null; }
+      if (!res.ok || !data || data.ok === false) {
+        console.error('Lead submission failed', res.status, data);
+        networkOk = false;
+      }
+    } catch (err) {
+      console.error('Lead submission network error', err);
+      networkOk = false;
+    }
+
+    // Mark submitted regardless — we don't want to spam the CRM on retry.
+    leadSubmitted = true;
+
+    if (!networkOk) {
+      showLeadAcceptedNoEstimate();
+      return;
+    }
+
+    const estimate = typeof data.estimate === 'number' ? data.estimate : null;
+    if (estimate == null) {
+      showLeadAcceptedNoEstimate('Quote received — Xavier will call to confirm your price.');
+      return;
+    }
+
+    cachedEstimate = estimate;
+    labelEl.textContent = state.propertyType === 'commercial' ? 'Ballpark Estimate' : 'Your Estimate';
+    noteEl.textContent  = state.propertyType === 'commercial' ? 'Per visit, excl. GST' : 'Estimated price (excl. GST)';
+    disclaimerEl.textContent = 'This is an estimate from our pricing system. Xavier will call to confirm the final price after reviewing your details. No payment is taken online.';
+    submitLbl.textContent = 'Back to Homepage';
+    animateEstimateCountUp(estimate);
+    document.getElementById('est-display').textContent = '$' + estimate;
+    document.getElementById('est-note').textContent = state.propertyType === 'commercial' ? 'Ballpark per visit (excl. GST)' : 'Estimated price (excl. GST)';
+    document.getElementById('est-breakdown').innerHTML = renderSidebarBreakdown(buildSelectionRows());
   }
 
   function validateBusinessDetails() {
@@ -1150,59 +1232,10 @@
     return ok;
   }
 
-  // Submit
-  document.getElementById('submit-btn').addEventListener('click', async () => {
-    const btn = document.getElementById('submit-btn');
-    const lbl = document.getElementById('submit-btn-label');
-    btn.disabled = true;
-    lbl.textContent = 'Sending…';
-
-    // Calculate estimated total for the payload
-    let estimatedTotal = 0;
-    if (state.propertyType === 'commercial') {
-      const rate = COMM_PRICING[state.frequency];
-      if (rate) {
-        const pricePerPane = rate[state.scope === 'both' ? 'both' : 'ext'];
-        const panes = state.customPaneCount > 0 ? state.customPaneCount : (COMM_PANE_MIDPOINTS[state.paneTier] || 17);
-        estimatedTotal = panes * pricePerPane;
-      }
-    } else {
-      estimatedTotal = (state.panesMin || 0) + (state.storeysAdd || 0) + (state.addonTotal || 0);
-    }
-
-    const payload = {
-      propertyType:    state.propertyType,
-      firstName:       state.fname,
-      lastName:        state.lname,
-      phone:           state.phone,
-      email:           state.email,
-      suburb:          state.suburb,
-      businessName:    state.businessName,
-      businessAddress: state.businessAddress,
-      preferredTime:   state.preferredTime,
-      notes:           state.notes,
-      panes:           state.panes,
-      customPaneCount: state.customPaneCount,
-      storeys:         state.storeys,
-      addons:          state.addons,
-      addonTotal:      state.addonTotal,
-      frequency:       state.frequency,
-      scope:           state.scope,
-      estimatedTotal:  estimatedTotal,
-    };
-
-    try {
-      await fetch('https://services.leadconnectorhq.com/hooks/KZviLEojY7TgiPp41oQG/webhook-trigger/QcPbAo05897VJCmko5Nz', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-    } catch (e) {
-      // Silently continue — show success regardless to avoid blocking the user
-    }
-
-    btn.disabled = false;
-    lbl.textContent = state.propertyType === 'commercial' ? 'Book My Free Call' : 'Send My Quote Request';
+  // Submit button on step 7. The lead is sent to the CRM in triggerPriceReveal()
+  // when the user lands on this step, so this button just shows the success overlay
+  // (or sends them home if they prefer).
+  document.getElementById('submit-btn').addEventListener('click', () => {
     const overlay = document.getElementById('success-overlay');
     overlay.style.display = 'flex';
     overlay.style.removeProperty('display');

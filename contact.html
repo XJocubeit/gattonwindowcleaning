@@ -250,24 +250,35 @@
     btn.disabled = true;
     btn.innerHTML = 'Sending…';
 
+    const service = document.getElementById('service').value;
+    const message = document.getElementById('message').value.trim();
+    const serviceSelect = document.getElementById('service');
+    const serviceLabel = serviceSelect.options[serviceSelect.selectedIndex]?.text || service;
+
+    // Map the simple enquiry form to the CRM schema. Only `name` is required by the
+    // CRM; everything else is best-effort. We bundle the chosen service + message
+    // into `notes` since the schema has no `service` field, and let the CRM treat
+    // it as a residential enquiry unless the user picked "commercial".
+    const notes = [serviceLabel ? `Service: ${serviceLabel}` : '', message].filter(Boolean).join(' — ');
     const payload = {
-      source: 'contact-page',
-      fullName:            document.getElementById('full-name').value.trim(),
-      phone:               document.getElementById('phone').value.trim(),
-      email:               document.getElementById('email').value.trim(),
-      suburb:              document.getElementById('suburb').value.trim(),
-      service:             document.getElementById('service').value,
-      message:             document.getElementById('message').value.trim(),
-      preferredContactTime: document.getElementById('contact-time').value,
+      name:           document.getElementById('full-name').value.trim() || 'Unknown',
+      phone:          document.getElementById('phone').value.trim(),
+      email:          document.getElementById('email').value.trim(),
+      suburb:         document.getElementById('suburb').value.trim(),
+      notes,
+      bestTimeToCall: document.getElementById('contact-time').value,
+      type:           service === 'commercial' ? 'COMMERCIAL' : 'RESIDENTIAL',
     };
 
     try {
-      await fetch('https://services.leadconnectorhq.com/hooks/KZviLEojY7TgiPp41oQG/webhook-trigger/QcPbAo05897VJCmko5Nz', {
+      await fetch('/api/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-    } catch (_) {}
+    } catch (err) {
+      console.error('Lead submission failed', err);
+    }
 
     btn.disabled = false;
     btn.innerHTML = origText;
