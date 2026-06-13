@@ -5,7 +5,7 @@
 //   LEAD_WEBHOOK_SECRET   (required)  the x-gwc-secret value
 //   LEAD_WEBHOOK_URL      (optional)  defaults to the production CRM URL below
 
-const DEFAULT_CRM_URL = 'https://crm.gattonwindowcleaning.app/api/webhook/lead';
+const DEFAULT_CRM_URL = 'https://crm.gattonwindowcleaning.com/api/webhook/lead';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
