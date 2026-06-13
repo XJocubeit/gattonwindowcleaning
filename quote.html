@@ -522,9 +522,9 @@
                 <span class="error-msg" id="err-email">Please enter a valid email address.</span>
               </div>
               <div>
-                <label class="form-label" for="suburb">Suburb / Area *</label>
-                <input type="text" id="suburb" class="form-input" placeholder="e.g. Gatton, Laidley, Plainland" autocomplete="address-level2">
-                <span class="error-msg" id="err-suburb">Please enter your suburb.</span>
+                <label class="form-label" for="address">Property Address *</label>
+                <input type="text" id="address" class="form-input" placeholder="e.g. 12 Main St, Gatton QLD 4343" autocomplete="street-address">
+                <span class="error-msg" id="err-address">Please enter the property address.</span>
               </div>
               <div>
                 <label class="form-label" for="preferred-time">Best time to call</label>
@@ -729,7 +729,7 @@
     customPaneCount: 0,
     businessName: '',
     businessAddress: '',
-    fname: '', lname: '', phone: '', email: '', suburb: '', preferredTime: '', notes: ''
+    fname: '', lname: '', phone: '', email: '', address: '', preferredTime: '', notes: ''
   };
 
   function getStepId(n) {
@@ -959,10 +959,10 @@
       }
     };
     check('email','err-email', v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
-    check('suburb','err-suburb', v => v.length > 0);
+    check('address','err-address', v => v.length > 0);
     if (ok) {
       state.email = document.getElementById('email').value.trim();
-      state.suburb = document.getElementById('suburb').value.trim();
+      state.address = document.getElementById('address').value.trim();
       state.preferredTime = document.getElementById('preferred-time').value;
       state.notes = document.getElementById('notes').value.trim();
     }
@@ -987,7 +987,7 @@
         : (COMM_PANE_MIDPOINTS[state.paneTier] || 17);
       return Object.assign({}, common, {
         address: state.businessAddress || '',
-        suburb: state.suburb || '',
+        suburb: '',
         notes: state.notes || '',
         businessName: state.businessName || '',
         frequency: FREQUENCY_MAP[state.frequency] || 'ONE_OFF',
@@ -1004,8 +1004,8 @@
     const notes = [state.notes, ...extraNotes].filter(Boolean).join(' — ');
 
     return Object.assign({}, common, {
-      address: '',
-      suburb: state.suburb || '',
+      address: state.address || '',
+      suburb: '',
       notes,
       panes,
       bigGlass: 0,
@@ -1034,7 +1034,7 @@
       rows.push(['Scope', state.addons.includes('Inside glass') ? 'Inside & out' : 'Exterior only']);
       const extras = state.addons.filter(a => a !== 'Outside glass' && a !== 'Inside glass');
       if (extras.length) rows.push(['Extras', extras.join(', ')]);
-      if (state.suburb) rows.push(['Suburb', state.suburb]);
+      if (state.address) rows.push(['Address', state.address]);
     }
     return rows;
   }
